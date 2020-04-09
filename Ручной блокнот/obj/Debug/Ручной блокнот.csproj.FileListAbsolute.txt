@@ -1,0 +1,13 @@
+C:\Users\Игорь\Desktop\универ\Домашка\Пашенцева\Ручной Блокнот\Ручной блокнот\bin\Debug\Ручной блокнот.exe.config
+C:\Users\Игорь\Desktop\универ\Домашка\Пашенцева\Ручной Блокнот\Ручной блокнот\bin\Debug\Ручной блокнот.exe
+C:\Users\Игорь\Desktop\универ\Домашка\Пашенцева\Ручной Блокнот\Ручной блокнот\bin\Debug\Ручной блокнот.pdb
+C:\Users\Игорь\Desktop\универ\Домашка\Пашенцева\Ручной Блокнот\Ручной блокнот\obj\Debug\Ручной блокнот.csprojAssemblyReference.cache
+C:\Users\Игорь\Desktop\универ\Домашка\Пашенцева\Ручной Блокнот\Ручной блокнот\obj\Debug\Ручной_блокнот.Form1.resources
+C:\Users\Игорь\Desktop\универ\Домашка\Пашенцева\Ручной Блокнот\Ручной блокнот\obj\Debug\Ручной_блокнот.Properties.Resources.resources
+C:\Users\Игорь\Desktop\универ\Домашка\Пашенцева\Ручной Блокнот\Ручной блокнот\obj\Debug\Ручной блокнот.csproj.GenerateResource.cache
+C:\Users\Игорь\Desktop\универ\Домашка\Пашенцева\Ручной Блокнот\Ручной блокнот\obj\Debug\Ручной блокнот.csproj.CoreCompileInputs.cache
+C:\Users\Игорь\Desktop\универ\Домашка\Пашенцева\Ручной Блокнот\Ручной блокнот\obj\Debug\Ручной блокнот.exe
+C:\Users\Игорь\Desktop\универ\Домашка\Пашенцева\Ручной Блокнот\Ручной блокнот\obj\Debug\Ручной блокнот.pdb
+C:\Users\Игорь\Desktop\универ\Домашка\Пашенцева\Ручной Блокнот\Ручной блокнот\obj\Debug\Ручной_блокнот.AboutEI.resources
+C:\Users\Игорь\Desktop\универ\Домашка\Пашенцева\Ручной Блокнот\Ручной блокнот\obj\Debug\Ручной_блокнот.LoadError.resources
+C:\Users\Игорь\Desktop\универ\Домашка\Пашенцева\Ручной Блокнот\Ручной блокнот\obj\Debug\Ручной_блокнот.ReWrite.resources
