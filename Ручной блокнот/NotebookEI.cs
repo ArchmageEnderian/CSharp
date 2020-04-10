@@ -30,7 +30,7 @@ namespace Ручной_блокнот
 
         private void AddNewToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            
+            LoadSpec = "";
             richTextBox1.Clear();
         }
 
@@ -111,7 +111,17 @@ namespace Ручной_блокнот
 
         private void DeleteFileToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            System.IO.File.Delete("C:\\Users\\" + Environment.UserName + "\\Desktop\\NotepadFile.txt");
+            if (File.Exists(saveFileDialog1.FileName))
+            {
+                System.IO.File.Delete(saveFileDialog1.FileName);
+            }
+            else
+            {
+                System.IO.File.Delete(LoadSpec);
+            }
+            saveFileDialog1.FileName = "";
+            LoadSpec = "";
+            richTextBox1.Clear();
         }
 
         private void SaveAsToolStripMenuItem_Click(object sender, EventArgs e)
