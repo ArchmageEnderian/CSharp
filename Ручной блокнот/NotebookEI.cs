@@ -40,25 +40,39 @@ namespace Ручной_блокнот
 
         private void LoadFileToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            try
-            {
-                FileStream file1 = new FileStream("C:\\Users\\" + Environment.UserName + "\\Desktop\\NotepadFile.txt", FileMode.Open);
-                StreamReader reader = new StreamReader(file1);
-                richTextBox1.Clear();
-                richTextBox1.AppendText(reader.ReadToEnd());
-                file1.Close();
-            }
-            catch
-            {
-                LoadError error = new LoadError();
-                error.ShowDialog();
-            }
-
+           Stream myStream = null;
+           OpenFileDialog openFileDialog1 = new OpenFileDialog();
+           openFileDialog1.InitialDirectory = "D:\\";
+           openFileDialog1.Filter = " txt files(*txt) | *.txt|All files (*.*)|*.*";
+           if(openFileDialog1.ShowDialog() == DialogResult.OK)
+           {
+               try
+               {
+                   if ((myStream = openFileDialog1.OpenFile())!=null)
+                   {
+                       using (myStream)
+                       {
+                           richTextBox1.LoadFile(openFileDialog1.FileName, RichTextBoxStreamType.PlainText);
+                       }
+                   }
+               }
+               catch(Exception ep)
+               {
+                   MessageBox.Show("Ошибка!");
+               }
+           } 
         }
 
+        
         private void SaveFileToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            if(File.Exists("C:\\Users\\" + Environment.UserName + "\\Desktop\\NotepadFile.txt"))
+            /*
+           saveFileDialog1.Filter = " txt files (*txt)|*.txt";
+           if(saveFileDialog1.ShowDialog() == System.Windows.Forms.DialogResult.OK && saveFileDialog1.FileName.Length > 0)
+           {
+               richTextBox1.SaveFile(saveFileDialog1.FileName, RichTextBoxStreamType.PlainText);
+           }*/
+            if (File.Exists("C:\\Users\\" + Environment.UserName + "\\Desktop\\NotepadFile.txt"))
             {
                 Data.Value = false;
                 ReWrite Rewriter = new ReWrite();
