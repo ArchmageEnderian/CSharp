@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -73,7 +73,7 @@ namespace Ручной_блокнот
             }
             else
             {
-                FileStream file1 = new FileStream("D:\\NotepadFile.txt", FileMode.Create);
+                FileStream file1 = new FileStream("C:\\Users\\" + Environment.UserName + "\\Desktop\\NotepadFile.txt", FileMode.Create);
                 StreamWriter writer = new StreamWriter(file1);
                 writer.Write(richTextBox1.Text);
                 writer.Close();
