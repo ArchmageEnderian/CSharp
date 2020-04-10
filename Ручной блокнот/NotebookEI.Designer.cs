@@ -33,6 +33,7 @@
             this.toolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.addNewToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.loadFileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.saveAsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.saveFileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.deleteFileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.справкаToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -67,6 +68,7 @@
             this.addNewToolStripMenuItem,
             this.loadFileToolStripMenuItem,
             this.saveFileToolStripMenuItem,
+            this.saveAsToolStripMenuItem,
             this.deleteFileToolStripMenuItem});
             this.toolStripMenuItem1.Name = "toolStripMenuItem1";
             this.toolStripMenuItem1.Size = new System.Drawing.Size(37, 20);
@@ -75,29 +77,36 @@
             // addNewToolStripMenuItem
             // 
             this.addNewToolStripMenuItem.Name = "addNewToolStripMenuItem";
-            this.addNewToolStripMenuItem.Size = new System.Drawing.Size(126, 22);
-            this.addNewToolStripMenuItem.Text = "New file";
+            this.addNewToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.addNewToolStripMenuItem.Text = "New";
             this.addNewToolStripMenuItem.Click += new System.EventHandler(this.AddNewToolStripMenuItem_Click);
             // 
             // loadFileToolStripMenuItem
             // 
             this.loadFileToolStripMenuItem.Name = "loadFileToolStripMenuItem";
-            this.loadFileToolStripMenuItem.Size = new System.Drawing.Size(126, 22);
-            this.loadFileToolStripMenuItem.Text = "Load file";
+            this.loadFileToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.loadFileToolStripMenuItem.Text = "Load";
             this.loadFileToolStripMenuItem.Click += new System.EventHandler(this.LoadFileToolStripMenuItem_Click);
+            // 
+            // saveAsToolStripMenuItem
+            // 
+            this.saveAsToolStripMenuItem.Name = "saveAsToolStripMenuItem";
+            this.saveAsToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.saveAsToolStripMenuItem.Text = "Save as";
+            this.saveAsToolStripMenuItem.Click += new System.EventHandler(this.SaveAsToolStripMenuItem_Click);
             // 
             // saveFileToolStripMenuItem
             // 
             this.saveFileToolStripMenuItem.Name = "saveFileToolStripMenuItem";
-            this.saveFileToolStripMenuItem.Size = new System.Drawing.Size(126, 22);
-            this.saveFileToolStripMenuItem.Text = "Save file";
+            this.saveFileToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.saveFileToolStripMenuItem.Text = "Save";
             this.saveFileToolStripMenuItem.Click += new System.EventHandler(this.SaveFileToolStripMenuItem_Click);
             // 
             // deleteFileToolStripMenuItem
             // 
             this.deleteFileToolStripMenuItem.Name = "deleteFileToolStripMenuItem";
-            this.deleteFileToolStripMenuItem.Size = new System.Drawing.Size(126, 22);
-            this.deleteFileToolStripMenuItem.Text = "Delete file";
+            this.deleteFileToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.deleteFileToolStripMenuItem.Text = "Delete";
             this.deleteFileToolStripMenuItem.Click += new System.EventHandler(this.DeleteFileToolStripMenuItem_Click);
             // 
             // справкаToolStripMenuItem
@@ -150,6 +159,7 @@
         private System.Windows.Forms.ToolStripMenuItem deleteFileToolStripMenuItem;
         private System.Windows.Forms.OpenFileDialog openFileDialog1;
         private System.Windows.Forms.SaveFileDialog saveFileDialog1;
+        private System.Windows.Forms.ToolStripMenuItem saveAsToolStripMenuItem;
     }
 }
 

@@ -42,7 +42,7 @@ namespace Ручной_блокнот
         {
            Stream myStream = null;
            OpenFileDialog openFileDialog1 = new OpenFileDialog();
-           openFileDialog1.InitialDirectory = "D:\\";
+           openFileDialog1.InitialDirectory = "C:\\Users\\" + Environment.UserName + "\\Desktop\\NotepadFile.txt";
            openFileDialog1.Filter = " txt files(*txt) | *.txt|All files (*.*)|*.*";
            if(openFileDialog1.ShowDialog() == DialogResult.OK)
            {
@@ -66,20 +66,14 @@ namespace Ручной_блокнот
         
         private void SaveFileToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            /*
-           saveFileDialog1.Filter = " txt files (*txt)|*.txt";
-           if(saveFileDialog1.ShowDialog() == System.Windows.Forms.DialogResult.OK && saveFileDialog1.FileName.Length > 0)
-           {
-               richTextBox1.SaveFile(saveFileDialog1.FileName, RichTextBoxStreamType.PlainText);
-           }*/
-            if (File.Exists("C:\\Users\\" + Environment.UserName + "\\Desktop\\NotepadFile.txt"))
+            if (File.Exists(saveFileDialog1.FileName))
             {
                 Data.Value = false;
                 ReWrite Rewriter = new ReWrite();
                 Rewriter.ShowDialog();
                 if (Data.Value)
                 {
-                    FileStream file1 = new FileStream("C:\\Users\\" + Environment.UserName + "\\Desktop\\NotepadFile.txt", FileMode.Create);
+                    FileStream file1 = new FileStream(saveFileDialog1.FileName, FileMode.Create);
                     StreamWriter writer = new StreamWriter(file1);
                     writer.Write(richTextBox1.Text);
                     writer.Close();
@@ -87,10 +81,15 @@ namespace Ручной_блокнот
             }
             else
             {
-                FileStream file1 = new FileStream("C:\\Users\\" + Environment.UserName + "\\Desktop\\NotepadFile.txt", FileMode.Create);
-                StreamWriter writer = new StreamWriter(file1);
-                writer.Write(richTextBox1.Text);
-                writer.Close();
+                saveFileDialog1.Filter = " txt files (*txt)|*.txt";
+                if (saveFileDialog1.ShowDialog() == System.Windows.Forms.DialogResult.OK && saveFileDialog1.FileName.Length > 0)
+                {
+                    richTextBox1.SaveFile(saveFileDialog1.FileName, RichTextBoxStreamType.PlainText);
+                }
+                else
+                {
+                    MessageBox.Show("Ошибка сохранения файла.\n Пожалуйста, попробуйте еще раз.");
+                }
             }
 
             
@@ -99,6 +98,19 @@ namespace Ручной_блокнот
         private void DeleteFileToolStripMenuItem_Click(object sender, EventArgs e)
         {
             System.IO.File.Delete("C:\\Users\\" + Environment.UserName + "\\Desktop\\NotepadFile.txt");
+        }
+
+        private void SaveAsToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            saveFileDialog1.Filter = " txt files (*txt)|*.txt";
+            if(saveFileDialog1.ShowDialog() == System.Windows.Forms.DialogResult.OK && saveFileDialog1.FileName.Length > 0)
+            {
+                 richTextBox1.SaveFile(saveFileDialog1.FileName, RichTextBoxStreamType.PlainText);
+            }
+            else
+            {
+                MessageBox.Show("Ошибка сохранения файла.\n Пожалуйста, попробуйте еще раз.");
+            }
         }
     }
     static class Data
