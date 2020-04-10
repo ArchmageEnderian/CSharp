@@ -81,6 +81,9 @@
     <EmbeddedResource Include="NotebookEI.resx">
       <DependentUpon>NotebookEI.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="NotebookEI.ru-RU.resx">
+      <DependentUpon>NotebookEI.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>

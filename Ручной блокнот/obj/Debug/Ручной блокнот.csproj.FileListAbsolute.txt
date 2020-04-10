@@ -24,3 +24,6 @@ D:\GitHub\GitKraken\CSharp\Ручной блокнот\obj\Debug\Ручной б
 D:\GitHub\GitKraken\CSharp\Ручной блокнот\obj\Debug\Ручной блокнот.csproj.CoreCompileInputs.cache
 D:\GitHub\GitKraken\CSharp\Ручной блокнот\obj\Debug\Ручной блокнот.exe
 D:\GitHub\GitKraken\CSharp\Ручной блокнот\obj\Debug\Ручной блокнот.pdb
+D:\GitHub\GitKraken\CSharp\Ручной блокнот\bin\Debug\ru-RU\Ручной блокнот.resources.dll
+D:\GitHub\GitKraken\CSharp\Ручной блокнот\obj\Debug\Ручной_блокнот.Form1.ru-RU.resources
+D:\GitHub\GitKraken\CSharp\Ручной блокнот\obj\Debug\ru-RU\Ручной блокнот.resources.dll
