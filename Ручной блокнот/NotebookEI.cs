@@ -17,6 +17,7 @@ namespace Ручной_блокнот
     public partial class Form1 : Form
     {
         public bool ReWriteBool = false;
+        private string LoadSpec = "";
         public Form1()
         {
             InitializeComponent();
@@ -29,7 +30,8 @@ namespace Ручной_блокнот
 
         private void AddNewToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            File.WriteAllText("C:\\Users\\" + Environment.UserName + "\\Desktop\\NotepadFile.txt", "");
+            
+            richTextBox1.Clear();
         }
 
         private void AboutProgrammToolStripMenuItem_Click(object sender, EventArgs e)
@@ -52,7 +54,8 @@ namespace Ручной_блокнот
                    {
                        using (myStream)
                        {
-                           richTextBox1.LoadFile(openFileDialog1.FileName, RichTextBoxStreamType.PlainText);
+                            richTextBox1.LoadFile(openFileDialog1.FileName, RichTextBoxStreamType.PlainText);
+                            LoadSpec = openFileDialog1.FileName;
                        }
                    }
                }
@@ -66,17 +69,28 @@ namespace Ручной_блокнот
         
         private void SaveFileToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            if (File.Exists(saveFileDialog1.FileName))
+            if (File.Exists(saveFileDialog1.FileName) || File.Exists(LoadSpec))
             {
                 Data.Value = false;
                 ReWrite Rewriter = new ReWrite();
                 Rewriter.ShowDialog();
                 if (Data.Value)
                 {
-                    FileStream file1 = new FileStream(saveFileDialog1.FileName, FileMode.Create);
-                    StreamWriter writer = new StreamWriter(file1);
-                    writer.Write(richTextBox1.Text);
-                    writer.Close();
+                    if (File.Exists(saveFileDialog1.FileName))
+                    {
+                        FileStream file1 = new FileStream(saveFileDialog1.FileName, FileMode.Create);
+                        StreamWriter writer = new StreamWriter(file1);
+                        writer.Write(richTextBox1.Text);
+                        writer.Close();
+                    }
+                    else
+                    {
+                        FileStream file1 = new FileStream(LoadSpec, FileMode.Create);
+                        StreamWriter writer = new StreamWriter(file1);
+                        writer.Write(richTextBox1.Text);
+                        writer.Close();
+                    }
+                    
                 }
             }
             else
