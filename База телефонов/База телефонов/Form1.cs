@@ -18,6 +18,7 @@ namespace База_телефонов
         public Form1()
         {
             InitializeComponent();
+            checkBox2.Checked = true;
         }
         private void RTBfillup()
         {
@@ -75,11 +76,10 @@ namespace База_телефонов
 
         private void ButtonChange_Click(object sender, EventArgs e)
         {
-            if (!check) RTBfillup();
-
             saveFileDialog1.Filter = " txt files (*txt)|*.txt";
             if (saveFileDialog1.ShowDialog() == System.Windows.Forms.DialogResult.OK && saveFileDialog1.FileName.Length > 0)
             {
+                if (!check) RTBfillup();
                 richTextBox1.SaveFile(saveFileDialog1.FileName, RichTextBoxStreamType.PlainText);
                 MessageBox.Show("Сохранение прошло успешно!", "Успешно!", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
@@ -87,7 +87,13 @@ namespace База_телефонов
             {
                 MessageBox.Show("Ошибка сохранения файла.\nПожалуйста, попробуйте еще раз.", "Ошибка!", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
-           
+            saveFileDialog1.FileName = "";
+            check = false;
+            for (int i = 0; i < j; i++)
+            {
+                masString[i] = null;
+            }
+            j = 0;
         }
 
         private void CheckBox_CheckedChanged(object sender, EventArgs e)
