@@ -27,12 +27,12 @@ namespace База_телефонов
             {
                 if (ultraString[i] == '+' && ultraString[i + 1] == '7')
                 {
-                    if (checkBox.Checked == false || checkBox2.Checked == true) Situation1(ultraString, i);
-                    else if (checkBox.Checked == true || checkBox2.Checked == false) Situation2(ultraString, i);
+                    if (checkBox.Checked == false && checkBox2.Checked == true) Situation1(ultraString, i);
+                    else if (checkBox.Checked == true && checkBox2.Checked == false) Situation2(ultraString, i);
                     else
-                    if (checkBox.Checked == true || checkBox2.Checked == true)
+                    if (checkBox.Checked == true && checkBox2.Checked == true)
                     {
-                        // исключение
+                        Situation3(ultraString, i);
                     }
 
                 }
@@ -43,6 +43,11 @@ namespace База_телефонов
                 richTextBox1.AppendText(masString[i] + "\n");
             }
             check = true;
+            for (int i = 0; i < j; i++)
+            {
+                masString[i] = null;
+            }
+            j = 0;
         }
         private void Situation1(string str, int counter) // для +7-***-***-**-**
         {
@@ -73,7 +78,21 @@ namespace База_телефонов
                 j++;
             }
         }
+        private void Situation3(string str, int counter) // для обоих случаев
+        {
+            bool flag = true;
+            string TestStr = "";
+            TestStr += "+7" + "-" + str[counter + 3] + str[counter + 4] + str[counter + 5] + "-" + str[counter + 7] + str[counter + 8] + str[counter + 9] + str[counter + 10] + str[counter + 11] + str[counter + 12] + str[counter + 13] + str[counter + 14] + str[counter + 15];
+            for (int q = 0; q < j; q++)
+                if (TestStr == masString[q]) flag = false;
 
+            if (flag)
+            {
+                masString[j] += "+7" + "-" + str[counter + 3] + str[counter + 4] + str[counter + 5] + "-" + str[counter + 7] + str[counter + 8] + str[counter + 9] + str[counter + 10] + str[counter + 11] + str[counter + 12] + str[counter + 13] + str[counter + 14] + str[counter + 15] + " || " + "8" + str[counter + 3] + str[counter + 4] + str[counter + 5] + str[counter + 7] + str[counter + 8] + str[counter + 9] + str[counter + 11] + str[counter + 12] + str[counter + 14] + str[counter + 15];
+                j++;
+            }
+
+        }
         private void ButtonChange_Click(object sender, EventArgs e)
         {
             saveFileDialog1.Filter = " txt files (*txt)|*.txt";
