@@ -21,12 +21,19 @@ namespace База_телефонов
             InitializeComponent();
             checkBox2.Checked = true;
         }
+        private bool IsNumber(char str1)
+        {
+            string str = str1.ToString();
+            int Num;
+            bool isNum = int.TryParse(str, out Num);
+            return isNum;
+        }
         private void RTBfillup()
         {
             string ultraString = richTextBox1.Text;
-            for (int i = 0; i < ultraString.Length - 1; i++)
+            for (int i = 0; i < ultraString.Length - 15; i++)
             {
-                if (ultraString[i] == '+' && ultraString[i + 1] == '7')
+                if (ultraString[i] == '+'  && IsNumber(ultraString[i + 1]) && (ultraString[i + 2] == ' ' || ultraString[i + 2] == '-') && IsNumber(ultraString[i + 3]) && IsNumber(ultraString[i + 4]) && IsNumber(ultraString[i + 5]) && (ultraString[i + 6] == ' ' || ultraString[i + 6] == '-') && IsNumber(ultraString[i + 7]) && IsNumber(ultraString[i + 8]) && IsNumber(ultraString[i + 9]) && (ultraString[i + 10] == ' ' || ultraString[i + 10] == '-') && IsNumber(ultraString[i + 11]) && IsNumber(ultraString[i + 12]) && (ultraString[i + 13] == ' ' || ultraString[i + 13] == '-') && IsNumber(ultraString[i + 14]) && IsNumber(ultraString[i + 15]))
                 {
                     if (checkBox.Checked == false && checkBox2.Checked == true) Situation1(ultraString, i);
                     else if (checkBox.Checked == true && checkBox2.Checked == false) Situation2(ultraString, i);
@@ -35,7 +42,7 @@ namespace База_телефонов
                     {
                         Situation3(ultraString, i);
                     }
-
+                    i += 15;
                 }
             }
             richTextBox1.Clear();
@@ -134,7 +141,6 @@ namespace База_телефонов
         private void ОПрограммеToolStripMenuItem1_Click(object sender, EventArgs e)
         {
             MessageBox.Show("Мой создатель Archmage 『 Enderian 』\n(Также известен миру как Малахов Игорь Дмитриевич)\nВерсия программы: BetaBuild V1.17", "Мой создатель", MessageBoxButtons.OK, MessageBoxIcon.Information);
-
         }
 
         private void SevenFormatToolStripMenuItem_Click(object sender, EventArgs e)
@@ -213,7 +219,7 @@ namespace База_телефонов
         {
             Stream myStream = null;
             OpenFileDialog openFileDialog1 = new OpenFileDialog();
-            openFileDialog1.InitialDirectory = "C:\\Users\\" + Environment.UserName + "\\Desktop\\NotepadFile.txt";
+            openFileDialog1.InitialDirectory = "C:\\Users\\" + Environment.UserName + "\\Desktop\\";
             openFileDialog1.Filter = " txt files(*txt) | *.txt|All files (*.*)|*.*";
             if (openFileDialog1.ShowDialog() == DialogResult.OK)
             {
@@ -229,7 +235,7 @@ namespace База_телефонов
                 }
                 catch (Exception ep)
                 {
-                    MessageBox.Show("Ошибка!");
+                    MessageBox.Show("Ошибка открытия файла!","Ошибка!", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
         }
