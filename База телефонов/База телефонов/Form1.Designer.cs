@@ -34,12 +34,14 @@
             this.файлToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.открытьToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.сохранитьКакToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.оПрограммеToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.ButtonChange = new System.Windows.Forms.Button();
-            this.checkBox = new System.Windows.Forms.CheckBox();
             this.вФормате7ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.вФормате8ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.оПрограммеToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.оПрограммеToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.ButtonChange = new System.Windows.Forms.Button();
+            this.checkBox = new System.Windows.Forms.CheckBox();
+            this.RTBbutton = new System.Windows.Forms.Button();
+            this.checkBox2 = new System.Windows.Forms.CheckBox();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -74,7 +76,7 @@
             // открытьToolStripMenuItem
             // 
             this.открытьToolStripMenuItem.Name = "открытьToolStripMenuItem";
-            this.открытьToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.открытьToolStripMenuItem.Size = new System.Drawing.Size(154, 22);
             this.открытьToolStripMenuItem.Text = "Открыть";
             // 
             // сохранитьКакToolStripMenuItem
@@ -83,37 +85,8 @@
             this.вФормате7ToolStripMenuItem,
             this.вФормате8ToolStripMenuItem});
             this.сохранитьКакToolStripMenuItem.Name = "сохранитьКакToolStripMenuItem";
-            this.сохранитьКакToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.сохранитьКакToolStripMenuItem.Size = new System.Drawing.Size(154, 22);
             this.сохранитьКакToolStripMenuItem.Text = "Сохранить как";
-            // 
-            // оПрограммеToolStripMenuItem
-            // 
-            this.оПрограммеToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.оПрограммеToolStripMenuItem1});
-            this.оПрограммеToolStripMenuItem.Name = "оПрограммеToolStripMenuItem";
-            this.оПрограммеToolStripMenuItem.Size = new System.Drawing.Size(94, 20);
-            this.оПрограммеToolStripMenuItem.Text = "О программе";
-            // 
-            // ButtonChange
-            // 
-            this.ButtonChange.Location = new System.Drawing.Point(12, 403);
-            this.ButtonChange.Name = "ButtonChange";
-            this.ButtonChange.Size = new System.Drawing.Size(195, 40);
-            this.ButtonChange.TabIndex = 2;
-            this.ButtonChange.Text = "Перенести телефоны!";
-            this.ButtonChange.UseVisualStyleBackColor = true;
-            this.ButtonChange.Click += new System.EventHandler(this.ButtonChange_Click);
-            // 
-            // checkBox
-            // 
-            this.checkBox.AutoSize = true;
-            this.checkBox.Location = new System.Drawing.Point(213, 416);
-            this.checkBox.Name = "checkBox";
-            this.checkBox.Size = new System.Drawing.Size(130, 17);
-            this.checkBox.TabIndex = 3;
-            this.checkBox.Text = "В формате 8**********";
-            this.checkBox.UseVisualStyleBackColor = true;
-            this.checkBox.CheckedChanged += new System.EventHandler(this.CheckBox_CheckedChanged);
             // 
             // вФормате7ToolStripMenuItem
             // 
@@ -127,17 +100,68 @@
             this.вФормате8ToolStripMenuItem.Size = new System.Drawing.Size(220, 22);
             this.вФормате8ToolStripMenuItem.Text = "В формате 8**********";
             // 
+            // оПрограммеToolStripMenuItem
+            // 
+            this.оПрограммеToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.оПрограммеToolStripMenuItem1});
+            this.оПрограммеToolStripMenuItem.Name = "оПрограммеToolStripMenuItem";
+            this.оПрограммеToolStripMenuItem.Size = new System.Drawing.Size(94, 20);
+            this.оПрограммеToolStripMenuItem.Text = "О программе";
+            // 
             // оПрограммеToolStripMenuItem1
             // 
             this.оПрограммеToolStripMenuItem1.Name = "оПрограммеToolStripMenuItem1";
-            this.оПрограммеToolStripMenuItem1.Size = new System.Drawing.Size(180, 22);
+            this.оПрограммеToolStripMenuItem1.Size = new System.Drawing.Size(149, 22);
             this.оПрограммеToolStripMenuItem1.Text = "О программе";
+            // 
+            // ButtonChange
+            // 
+            this.ButtonChange.Location = new System.Drawing.Point(593, 403);
+            this.ButtonChange.Name = "ButtonChange";
+            this.ButtonChange.Size = new System.Drawing.Size(195, 40);
+            this.ButtonChange.TabIndex = 2;
+            this.ButtonChange.Text = "Сохранить номера";
+            this.ButtonChange.UseVisualStyleBackColor = true;
+            this.ButtonChange.Click += new System.EventHandler(this.ButtonChange_Click);
+            // 
+            // checkBox
+            // 
+            this.checkBox.AutoSize = true;
+            this.checkBox.Location = new System.Drawing.Point(240, 416);
+            this.checkBox.Name = "checkBox";
+            this.checkBox.Size = new System.Drawing.Size(130, 17);
+            this.checkBox.TabIndex = 3;
+            this.checkBox.Text = "В формате 8**********";
+            this.checkBox.UseVisualStyleBackColor = true;
+            this.checkBox.CheckedChanged += new System.EventHandler(this.CheckBox_CheckedChanged);
+            // 
+            // RTBbutton
+            // 
+            this.RTBbutton.Location = new System.Drawing.Point(12, 403);
+            this.RTBbutton.Name = "RTBbutton";
+            this.RTBbutton.Size = new System.Drawing.Size(177, 40);
+            this.RTBbutton.TabIndex = 4;
+            this.RTBbutton.Text = "Создать список номеров!";
+            this.RTBbutton.UseVisualStyleBackColor = true;
+            this.RTBbutton.Click += new System.EventHandler(this.RTBbutton_Click);
+            // 
+            // checkBox2
+            // 
+            this.checkBox2.AutoSize = true;
+            this.checkBox2.Location = new System.Drawing.Point(400, 416);
+            this.checkBox2.Name = "checkBox2";
+            this.checkBox2.Size = new System.Drawing.Size(148, 17);
+            this.checkBox2.TabIndex = 5;
+            this.checkBox2.Text = "В формате +7-***-***-**-**";
+            this.checkBox2.UseVisualStyleBackColor = true;
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 455);
+            this.Controls.Add(this.checkBox2);
+            this.Controls.Add(this.RTBbutton);
             this.Controls.Add(this.checkBox);
             this.Controls.Add(this.ButtonChange);
             this.Controls.Add(this.richTextBox1);
@@ -166,6 +190,8 @@
         private System.Windows.Forms.ToolStripMenuItem вФормате7ToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem вФормате8ToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem оПрограммеToolStripMenuItem1;
+        private System.Windows.Forms.Button RTBbutton;
+        private System.Windows.Forms.CheckBox checkBox2;
     }
 }
 
