@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.IO;
 
 namespace База_телефонов
 {
@@ -123,6 +124,114 @@ namespace База_телефонов
         private void RTBbutton_Click(object sender, EventArgs e)
         {
             RTBfillup();
+        }
+
+        private void ОтчиститьОкноToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            richTextBox1.Clear();
+        }
+
+        private void ОПрограммеToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("Мой создатель Archmage 『 Enderian 』\n(Также известен миру как Малахов Игорь Дмитриевич)\nВерсия программы: BetaBuild V1.17", "Мой создатель", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+        }
+
+        private void SevenFormatToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            checkBox.Checked = false;
+            checkBox2.Checked = true;
+            saveFileDialog1.Filter = " txt files (*txt)|*.txt";
+            if (saveFileDialog1.ShowDialog() == System.Windows.Forms.DialogResult.OK && saveFileDialog1.FileName.Length > 0)
+            {
+                if (!check) RTBfillup();
+                richTextBox1.SaveFile(saveFileDialog1.FileName, RichTextBoxStreamType.PlainText);
+                MessageBox.Show("Сохранение прошло успешно!", "Успешно!", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            else
+            {
+                MessageBox.Show("Ошибка сохранения файла.\nПожалуйста, попробуйте еще раз.", "Ошибка!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            saveFileDialog1.FileName = "";
+            check = false;
+            for (int i = 0; i < j; i++)
+            {
+                masString[i] = null;
+            }
+            j = 0;
+        }
+
+        private void EightFormatToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            checkBox.Checked = true;
+            checkBox2.Checked = false;
+            saveFileDialog1.Filter = " txt files (*txt)|*.txt";
+            if (saveFileDialog1.ShowDialog() == System.Windows.Forms.DialogResult.OK && saveFileDialog1.FileName.Length > 0)
+            {
+                if (!check) RTBfillup();
+                richTextBox1.SaveFile(saveFileDialog1.FileName, RichTextBoxStreamType.PlainText);
+                MessageBox.Show("Сохранение прошло успешно!", "Успешно!", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            else
+            {
+                MessageBox.Show("Ошибка сохранения файла.\nПожалуйста, попробуйте еще раз.", "Ошибка!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            saveFileDialog1.FileName = "";
+            check = false;
+            for (int i = 0; i < j; i++)
+            {
+                masString[i] = null;
+            }
+            j = 0;
+        }
+
+        private void ВОбоихФорматахToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            checkBox.Checked = true;
+            checkBox2.Checked = true;
+            saveFileDialog1.Filter = " txt files (*txt)|*.txt";
+            if (saveFileDialog1.ShowDialog() == System.Windows.Forms.DialogResult.OK && saveFileDialog1.FileName.Length > 0)
+            {
+                if (!check) RTBfillup();
+                richTextBox1.SaveFile(saveFileDialog1.FileName, RichTextBoxStreamType.PlainText);
+                MessageBox.Show("Сохранение прошло успешно!", "Успешно!", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            else
+            {
+                MessageBox.Show("Ошибка сохранения файла.\nПожалуйста, попробуйте еще раз.", "Ошибка!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            saveFileDialog1.FileName = "";
+            check = false;
+            for (int i = 0; i < j; i++)
+            {
+                masString[i] = null;
+            }
+            j = 0;
+        }
+
+        private void OpenToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Stream myStream = null;
+            OpenFileDialog openFileDialog1 = new OpenFileDialog();
+            openFileDialog1.InitialDirectory = "C:\\Users\\" + Environment.UserName + "\\Desktop\\NotepadFile.txt";
+            openFileDialog1.Filter = " txt files(*txt) | *.txt|All files (*.*)|*.*";
+            if (openFileDialog1.ShowDialog() == DialogResult.OK)
+            {
+                try
+                {
+                    if ((myStream = openFileDialog1.OpenFile()) != null)
+                    {
+                        using (myStream)
+                        {
+                            richTextBox1.LoadFile(openFileDialog1.FileName, RichTextBoxStreamType.PlainText);
+                        }
+                    }
+                }
+                catch (Exception ep)
+                {
+                    MessageBox.Show("Ошибка!");
+                }
+            }
         }
     }
 }

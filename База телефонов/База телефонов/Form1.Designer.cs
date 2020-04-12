@@ -32,10 +32,13 @@
             this.richTextBox1 = new System.Windows.Forms.RichTextBox();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.файлToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.открытьToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.OpenToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.сохранитьКакToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.вФормате7ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.вФормате8ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.SevenFormatToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.EightFormatToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.вОбоихФорматахToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.окноToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.отчиститьОкноToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.оПрограммеToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.оПрограммеToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.ButtonChange = new System.Windows.Forms.Button();
@@ -43,6 +46,7 @@
             this.RTBbutton = new System.Windows.Forms.Button();
             this.checkBox2 = new System.Windows.Forms.CheckBox();
             this.saveFileDialog1 = new System.Windows.Forms.SaveFileDialog();
+            this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -58,6 +62,7 @@
             // 
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.файлToolStripMenuItem,
+            this.окноToolStripMenuItem,
             this.оПрограммеToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
@@ -68,38 +73,64 @@
             // файлToolStripMenuItem
             // 
             this.файлToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.открытьToolStripMenuItem,
+            this.OpenToolStripMenuItem,
             this.сохранитьКакToolStripMenuItem});
             this.файлToolStripMenuItem.Name = "файлToolStripMenuItem";
             this.файлToolStripMenuItem.Size = new System.Drawing.Size(48, 20);
             this.файлToolStripMenuItem.Text = "Файл";
             // 
-            // открытьToolStripMenuItem
+            // OpenToolStripMenuItem
             // 
-            this.открытьToolStripMenuItem.Name = "открытьToolStripMenuItem";
-            this.открытьToolStripMenuItem.Size = new System.Drawing.Size(154, 22);
-            this.открытьToolStripMenuItem.Text = "Открыть";
+            this.OpenToolStripMenuItem.Name = "OpenToolStripMenuItem";
+            this.OpenToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.OpenToolStripMenuItem.Text = "Открыть";
+            this.OpenToolStripMenuItem.Click += new System.EventHandler(this.OpenToolStripMenuItem_Click);
             // 
             // сохранитьКакToolStripMenuItem
             // 
             this.сохранитьКакToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.вФормате7ToolStripMenuItem,
-            this.вФормате8ToolStripMenuItem});
+            this.SevenFormatToolStripMenuItem,
+            this.EightFormatToolStripMenuItem,
+            this.вОбоихФорматахToolStripMenuItem});
             this.сохранитьКакToolStripMenuItem.Name = "сохранитьКакToolStripMenuItem";
-            this.сохранитьКакToolStripMenuItem.Size = new System.Drawing.Size(154, 22);
+            this.сохранитьКакToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.сохранитьКакToolStripMenuItem.Text = "Сохранить как";
             // 
-            // вФормате7ToolStripMenuItem
+            // SevenFormatToolStripMenuItem
             // 
-            this.вФормате7ToolStripMenuItem.Name = "вФормате7ToolStripMenuItem";
-            this.вФормате7ToolStripMenuItem.Size = new System.Drawing.Size(220, 22);
-            this.вФормате7ToolStripMenuItem.Text = "В формате +7-***-***-**-**";
+            this.SevenFormatToolStripMenuItem.Name = "SevenFormatToolStripMenuItem";
+            this.SevenFormatToolStripMenuItem.Size = new System.Drawing.Size(220, 22);
+            this.SevenFormatToolStripMenuItem.Text = "В формате +7-***-***-**-**";
+            this.SevenFormatToolStripMenuItem.Click += new System.EventHandler(this.SevenFormatToolStripMenuItem_Click);
             // 
-            // вФормате8ToolStripMenuItem
+            // EightFormatToolStripMenuItem
             // 
-            this.вФормате8ToolStripMenuItem.Name = "вФормате8ToolStripMenuItem";
-            this.вФормате8ToolStripMenuItem.Size = new System.Drawing.Size(220, 22);
-            this.вФормате8ToolStripMenuItem.Text = "В формате 8**********";
+            this.EightFormatToolStripMenuItem.Name = "EightFormatToolStripMenuItem";
+            this.EightFormatToolStripMenuItem.Size = new System.Drawing.Size(220, 22);
+            this.EightFormatToolStripMenuItem.Text = "В формате 8**********";
+            this.EightFormatToolStripMenuItem.Click += new System.EventHandler(this.EightFormatToolStripMenuItem_Click);
+            // 
+            // вОбоихФорматахToolStripMenuItem
+            // 
+            this.вОбоихФорматахToolStripMenuItem.Name = "вОбоихФорматахToolStripMenuItem";
+            this.вОбоихФорматахToolStripMenuItem.Size = new System.Drawing.Size(220, 22);
+            this.вОбоихФорматахToolStripMenuItem.Text = "В обоих форматах";
+            this.вОбоихФорматахToolStripMenuItem.Click += new System.EventHandler(this.ВОбоихФорматахToolStripMenuItem_Click);
+            // 
+            // окноToolStripMenuItem
+            // 
+            this.окноToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.отчиститьОкноToolStripMenuItem});
+            this.окноToolStripMenuItem.Name = "окноToolStripMenuItem";
+            this.окноToolStripMenuItem.Size = new System.Drawing.Size(48, 20);
+            this.окноToolStripMenuItem.Text = "Окно";
+            // 
+            // отчиститьОкноToolStripMenuItem
+            // 
+            this.отчиститьОкноToolStripMenuItem.Name = "отчиститьОкноToolStripMenuItem";
+            this.отчиститьОкноToolStripMenuItem.Size = new System.Drawing.Size(161, 22);
+            this.отчиститьОкноToolStripMenuItem.Text = "Отчистить окно";
+            this.отчиститьОкноToolStripMenuItem.Click += new System.EventHandler(this.ОтчиститьОкноToolStripMenuItem_Click);
             // 
             // оПрограммеToolStripMenuItem
             // 
@@ -114,6 +145,7 @@
             this.оПрограммеToolStripMenuItem1.Name = "оПрограммеToolStripMenuItem1";
             this.оПрограммеToolStripMenuItem1.Size = new System.Drawing.Size(149, 22);
             this.оПрограммеToolStripMenuItem1.Text = "О программе";
+            this.оПрограммеToolStripMenuItem1.Click += new System.EventHandler(this.ОПрограммеToolStripMenuItem1_Click);
             // 
             // ButtonChange
             // 
@@ -128,7 +160,7 @@
             // checkBox
             // 
             this.checkBox.AutoSize = true;
-            this.checkBox.Location = new System.Drawing.Point(240, 416);
+            this.checkBox.Location = new System.Drawing.Point(420, 416);
             this.checkBox.Name = "checkBox";
             this.checkBox.Size = new System.Drawing.Size(130, 17);
             this.checkBox.TabIndex = 3;
@@ -149,12 +181,16 @@
             // checkBox2
             // 
             this.checkBox2.AutoSize = true;
-            this.checkBox2.Location = new System.Drawing.Point(400, 416);
+            this.checkBox2.Location = new System.Drawing.Point(237, 416);
             this.checkBox2.Name = "checkBox2";
             this.checkBox2.Size = new System.Drawing.Size(148, 17);
             this.checkBox2.TabIndex = 5;
             this.checkBox2.Text = "В формате +7-***-***-**-**";
             this.checkBox2.UseVisualStyleBackColor = true;
+            // 
+            // openFileDialog1
+            // 
+            this.openFileDialog1.FileName = "openFileDialog1";
             // 
             // Form1
             // 
@@ -183,17 +219,21 @@
         private System.Windows.Forms.RichTextBox richTextBox1;
         private System.Windows.Forms.MenuStrip menuStrip1;
         private System.Windows.Forms.ToolStripMenuItem файлToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem открытьToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem OpenToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem сохранитьКакToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem оПрограммеToolStripMenuItem;
         private System.Windows.Forms.Button ButtonChange;
         private System.Windows.Forms.CheckBox checkBox;
-        private System.Windows.Forms.ToolStripMenuItem вФормате7ToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem вФормате8ToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem SevenFormatToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem EightFormatToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem оПрограммеToolStripMenuItem1;
         private System.Windows.Forms.Button RTBbutton;
         private System.Windows.Forms.CheckBox checkBox2;
         private System.Windows.Forms.SaveFileDialog saveFileDialog1;
+        private System.Windows.Forms.ToolStripMenuItem окноToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem отчиститьОкноToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem вОбоихФорматахToolStripMenuItem;
+        private System.Windows.Forms.OpenFileDialog openFileDialog1;
     }
 }
 
