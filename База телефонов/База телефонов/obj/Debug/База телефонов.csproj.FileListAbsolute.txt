@@ -1,0 +1,10 @@
+D:\GitHub\GitKraken\CSharp\База телефонов\База телефонов\bin\Debug\База телефонов.exe.config
+D:\GitHub\GitKraken\CSharp\База телефонов\База телефонов\bin\Debug\База телефонов.exe
+D:\GitHub\GitKraken\CSharp\База телефонов\База телефонов\bin\Debug\База телефонов.pdb
+D:\GitHub\GitKraken\CSharp\База телефонов\База телефонов\obj\Debug\База телефонов.csprojAssemblyReference.cache
+D:\GitHub\GitKraken\CSharp\База телефонов\База телефонов\obj\Debug\База_телефонов.Form1.resources
+D:\GitHub\GitKraken\CSharp\База телефонов\База телефонов\obj\Debug\База_телефонов.Properties.Resources.resources
+D:\GitHub\GitKraken\CSharp\База телефонов\База телефонов\obj\Debug\База телефонов.csproj.GenerateResource.cache
+D:\GitHub\GitKraken\CSharp\База телефонов\База телефонов\obj\Debug\База телефонов.csproj.CoreCompileInputs.cache
+D:\GitHub\GitKraken\CSharp\База телефонов\База телефонов\obj\Debug\База телефонов.exe
+D:\GitHub\GitKraken\CSharp\База телефонов\База телефонов\obj\Debug\База телефонов.pdb
