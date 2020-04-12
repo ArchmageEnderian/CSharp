@@ -42,6 +42,7 @@
             this.checkBox = new System.Windows.Forms.CheckBox();
             this.RTBbutton = new System.Windows.Forms.Button();
             this.checkBox2 = new System.Windows.Forms.CheckBox();
+            this.saveFileDialog1 = new System.Windows.Forms.SaveFileDialog();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -192,6 +193,7 @@
         private System.Windows.Forms.ToolStripMenuItem оПрограммеToolStripMenuItem1;
         private System.Windows.Forms.Button RTBbutton;
         private System.Windows.Forms.CheckBox checkBox2;
+        private System.Windows.Forms.SaveFileDialog saveFileDialog1;
     }
 }
 

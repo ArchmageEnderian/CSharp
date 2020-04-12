@@ -14,9 +14,34 @@ namespace База_телефонов
     {
         private string[] masString = new string[1000];
         private int j = 0;
+        private bool check = false;
         public Form1()
         {
             InitializeComponent();
+        }
+        private void RTBfillup()
+        {
+            string ultraString = richTextBox1.Text;
+            for (int i = 0; i < ultraString.Length - 1; i++)
+            {
+                if (ultraString[i] == '+' && ultraString[i + 1] == '7')
+                {
+                    if (checkBox.Checked == false || checkBox2.Checked == true) Situation1(ultraString, i);
+                    else if (checkBox.Checked == true || checkBox2.Checked == false) Situation2(ultraString, i);
+                    else
+                    if (checkBox.Checked == true || checkBox2.Checked == true)
+                    {
+                        // исключение
+                    }
+
+                }
+            }
+            richTextBox1.Clear();
+            for (int i = 0; i < j; i++)
+            {
+                richTextBox1.AppendText(masString[i] + "\n");
+            }
+            check = true;
         }
         private void Situation1(string str, int counter) // для +7-***-***-**-**
         {
@@ -50,24 +75,19 @@ namespace База_телефонов
 
         private void ButtonChange_Click(object sender, EventArgs e)
         {
-            string ultraString = richTextBox1.Text;
-            for (int i = 0; i < ultraString.Length - 1; i++)
+            if (!check) RTBfillup();
+
+            saveFileDialog1.Filter = " txt files (*txt)|*.txt";
+            if (saveFileDialog1.ShowDialog() == System.Windows.Forms.DialogResult.OK && saveFileDialog1.FileName.Length > 0)
             {
-                if (ultraString[i] == '+' && ultraString[i + 1] == '7')
-                {
-                    if (checkBox.Checked == false || checkBox2.Checked == true) Situation1(ultraString, i);
-                    else if (checkBox.Checked == true || checkBox2.Checked == false) Situation2(ultraString, i);
-                    else 
-                    if (checkBox.Checked == true || checkBox2.Checked == true)
-                    {
-                        // исключение
-                    }
-
-                }
+                richTextBox1.SaveFile(saveFileDialog1.FileName, RichTextBoxStreamType.PlainText);
+                MessageBox.Show("Сохранение прошло успешно!", "Успешно!", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
-
-
-            MessageBox.Show("Сохранение прошло успешно!", "Успешно!", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            else
+            {
+                MessageBox.Show("Ошибка сохранения файла.\nПожалуйста, попробуйте еще раз.", "Ошибка!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+           
         }
 
         private void CheckBox_CheckedChanged(object sender, EventArgs e)
@@ -77,7 +97,7 @@ namespace База_телефонов
 
         private void RTBbutton_Click(object sender, EventArgs e)
         {
-
+            RTBfillup();
         }
     }
 }
