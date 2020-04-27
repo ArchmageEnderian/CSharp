@@ -1,0 +1,10 @@
+C:\Users\Игорь\Desktop\универ\Домашка\Пашенцева\Колобок\bin\Debug\Колобок.exe.config
+C:\Users\Игорь\Desktop\универ\Домашка\Пашенцева\Колобок\bin\Debug\Колобок.exe
+C:\Users\Игорь\Desktop\универ\Домашка\Пашенцева\Колобок\bin\Debug\Колобок.pdb
+C:\Users\Игорь\Desktop\универ\Домашка\Пашенцева\Колобок\obj\Debug\Колобок.csprojAssemblyReference.cache
+C:\Users\Игорь\Desktop\универ\Домашка\Пашенцева\Колобок\obj\Debug\Колобок.Form1.resources
+C:\Users\Игорь\Desktop\универ\Домашка\Пашенцева\Колобок\obj\Debug\Колобок.Properties.Resources.resources
+C:\Users\Игорь\Desktop\универ\Домашка\Пашенцева\Колобок\obj\Debug\Колобок.csproj.GenerateResource.cache
+C:\Users\Игорь\Desktop\универ\Домашка\Пашенцева\Колобок\obj\Debug\Колобок.csproj.CoreCompileInputs.cache
+C:\Users\Игорь\Desktop\универ\Домашка\Пашенцева\Колобок\obj\Debug\Колобок.exe
+C:\Users\Игорь\Desktop\универ\Домашка\Пашенцева\Колобок\obj\Debug\Колобок.pdb
