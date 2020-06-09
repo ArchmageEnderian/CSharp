@@ -35,6 +35,9 @@
             this.doljnost = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.oklad = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.info = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Refresh = new System.Windows.Forms.Button();
+            this.Add = new System.Windows.Forms.Button();
+            this.Take = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -53,7 +56,7 @@
             this.dataGridView1.Location = new System.Drawing.Point(12, 12);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
-            this.dataGridView1.Size = new System.Drawing.Size(776, 350);
+            this.dataGridView1.Size = new System.Drawing.Size(647, 350);
             this.dataGridView1.TabIndex = 0;
             // 
             // fam
@@ -64,39 +67,72 @@
             // 
             // name
             // 
-            this.name.HeaderText = "Column1";
+            this.name.HeaderText = "Имя";
             this.name.Name = "name";
             this.name.ReadOnly = true;
             // 
             // lastName
             // 
-            this.lastName.HeaderText = "Column1";
+            this.lastName.HeaderText = "Отчество";
             this.lastName.Name = "lastName";
             this.lastName.ReadOnly = true;
             // 
             // doljnost
             // 
-            this.doljnost.HeaderText = "Column1";
+            this.doljnost.HeaderText = "Должность";
             this.doljnost.Name = "doljnost";
             this.doljnost.ReadOnly = true;
             // 
             // oklad
             // 
-            this.oklad.HeaderText = "Column1";
+            this.oklad.HeaderText = "Желаемая зарплата";
             this.oklad.Name = "oklad";
             this.oklad.ReadOnly = true;
             // 
             // info
             // 
-            this.info.HeaderText = "Column1";
+            this.info.HeaderText = "Резюме";
             this.info.Name = "info";
             this.info.ReadOnly = true;
+            // 
+            // Refresh
+            // 
+            this.Refresh.Location = new System.Drawing.Point(12, 368);
+            this.Refresh.Name = "Refresh";
+            this.Refresh.Size = new System.Drawing.Size(99, 44);
+            this.Refresh.TabIndex = 1;
+            this.Refresh.Text = "Обновить";
+            this.Refresh.UseVisualStyleBackColor = true;
+            this.Refresh.Click += new System.EventHandler(this.Refresh_Click);
+            // 
+            // Add
+            // 
+            this.Add.Location = new System.Drawing.Point(275, 368);
+            this.Add.Name = "Add";
+            this.Add.Size = new System.Drawing.Size(99, 44);
+            this.Add.TabIndex = 2;
+            this.Add.Text = "Добавить вакансию";
+            this.Add.UseVisualStyleBackColor = true;
+            this.Add.Click += new System.EventHandler(this.Add_Click);
+            // 
+            // Take
+            // 
+            this.Take.Location = new System.Drawing.Point(559, 368);
+            this.Take.Name = "Take";
+            this.Take.Size = new System.Drawing.Size(99, 44);
+            this.Take.TabIndex = 3;
+            this.Take.Text = "Взять на работу!";
+            this.Take.UseVisualStyleBackColor = true;
+            this.Take.Click += new System.EventHandler(this.Take_Click);
             // 
             // GodFormActivated
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(670, 424);
+            this.Controls.Add(this.Take);
+            this.Controls.Add(this.Add);
+            this.Controls.Add(this.Refresh);
             this.Controls.Add(this.dataGridView1);
             this.Name = "GodFormActivated";
             this.Text = "GodFormActivated";
@@ -114,5 +150,8 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn doljnost;
         private System.Windows.Forms.DataGridViewTextBoxColumn oklad;
         private System.Windows.Forms.DataGridViewTextBoxColumn info;
+        private System.Windows.Forms.Button Refresh;
+        private System.Windows.Forms.Button Add;
+        private System.Windows.Forms.Button Take;
     }
 }

@@ -27,7 +27,8 @@ namespace BD
             MySqlConnection connection = new MySqlConnection(connectionString);
             connection.Open();
             WriteStyle( ReaderStyle(connection, "`Last_name`,`Name`,`Father_name`, `Doljnost`, `Oklad`, rezume.Info", "`soiskateli`", "`rezume` ON soiskateli.id_users = rezume.User") );
-         }
+            connection.Close();
+        }
         private void WriteStyle(MySqlDataReader read)
         {
             while (read.Read())
@@ -49,6 +50,24 @@ namespace BD
             MySqlCommand command = new MySqlCommand(sql, connection);
             MySqlDataReader reader = command.ExecuteReader();
             return reader;
+        }
+
+        private void Refresh_Click(object sender, EventArgs e)
+        {
+            dataGridView1.Rows.Clear();
+            Strtr();
+            
+        }
+
+        private void Add_Click(object sender, EventArgs e)
+        {
+            // Добавление вакансии в список вакансий
+        }
+
+        private void Take_Click(object sender, EventArgs e)
+        {
+            //Функция удаления человека
+            MessageBox.Show("Собеседование назначено!","Отлично!",MessageBoxButtons.OK,MessageBoxIcon.Information,MessageBoxDefaultButton.Button1);
         }
 
         // SELECT `Last_name`,`Name`,`Father_name`, `Doljnost`, `Oklad`, rezume.Info FROM `soiskateli` JOIN `rezume` ON soiskateli.id_users = rezume.User
