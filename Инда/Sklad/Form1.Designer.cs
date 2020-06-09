@@ -97,12 +97,12 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(242, 127);
-            this.Controls.Add(this.ErrorLabel);
             this.Controls.Add(this.Rab);
             this.Controls.Add(this.God);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
+            this.Controls.Add(this.ErrorLabel);
             this.Name = "Form1";
             this.Text = "Биржа мемов";
             this.ResumeLayout(false);

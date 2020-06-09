@@ -38,6 +38,10 @@
             this.Refresh = new System.Windows.Forms.Button();
             this.Add = new System.Windows.Forms.Button();
             this.Take = new System.Windows.Forms.Button();
+            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.Otmena = new System.Windows.Forms.Button();
+            this.yesbut = new System.Windows.Forms.Button();
+            this.label = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -121,23 +125,64 @@
             this.Take.Name = "Take";
             this.Take.Size = new System.Drawing.Size(99, 44);
             this.Take.TabIndex = 3;
-            this.Take.Text = "Взять на работу!";
+            this.Take.Text = "Взять на собеседование?";
             this.Take.UseVisualStyleBackColor = true;
             this.Take.Click += new System.EventHandler(this.Take_Click);
+            // 
+            // textBox2
+            // 
+            this.textBox2.Location = new System.Drawing.Point(487, 392);
+            this.textBox2.Name = "textBox2";
+            this.textBox2.Size = new System.Drawing.Size(66, 20);
+            this.textBox2.TabIndex = 5;
+            // 
+            // Otmena
+            // 
+            this.Otmena.Location = new System.Drawing.Point(382, 368);
+            this.Otmena.Name = "Otmena";
+            this.Otmena.Size = new System.Drawing.Size(99, 44);
+            this.Otmena.TabIndex = 6;
+            this.Otmena.Text = "Отмена";
+            this.Otmena.UseVisualStyleBackColor = true;
+            this.Otmena.Click += new System.EventHandler(this.Otmena_Click);
+            // 
+            // yesbut
+            // 
+            this.yesbut.Location = new System.Drawing.Point(559, 368);
+            this.yesbut.Name = "yesbut";
+            this.yesbut.Size = new System.Drawing.Size(99, 44);
+            this.yesbut.TabIndex = 7;
+            this.yesbut.Text = "Взять на собеседование!";
+            this.yesbut.UseVisualStyleBackColor = true;
+            this.yesbut.Click += new System.EventHandler(this.yesbut_Click);
+            // 
+            // label
+            // 
+            this.label.AutoSize = true;
+            this.label.Location = new System.Drawing.Point(498, 373);
+            this.label.Name = "label";
+            this.label.Size = new System.Drawing.Size(44, 13);
+            this.label.TabIndex = 8;
+            this.label.Text = "Номер:";
             // 
             // GodFormActivated
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(670, 424);
-            this.Controls.Add(this.Take);
+            this.Controls.Add(this.label);
+            this.Controls.Add(this.Otmena);
+            this.Controls.Add(this.textBox2);
             this.Controls.Add(this.Add);
             this.Controls.Add(this.Refresh);
             this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.Take);
+            this.Controls.Add(this.yesbut);
             this.Name = "GodFormActivated";
             this.Text = "GodFormActivated";
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -153,5 +198,9 @@
         private System.Windows.Forms.Button Refresh;
         private System.Windows.Forms.Button Add;
         private System.Windows.Forms.Button Take;
+        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.Button Otmena;
+        private System.Windows.Forms.Button yesbut;
+        private System.Windows.Forms.Label label;
     }
 }
