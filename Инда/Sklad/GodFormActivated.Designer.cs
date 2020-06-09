@@ -29,6 +29,12 @@
         private void InitializeComponent()
         {
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.fam = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.name = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.lastName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.doljnost = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.oklad = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.info = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -37,11 +43,54 @@
             this.dataGridView1.AllowUserToAddRows = false;
             this.dataGridView1.AllowUserToDeleteRows = false;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.fam,
+            this.name,
+            this.lastName,
+            this.doljnost,
+            this.oklad,
+            this.info});
             this.dataGridView1.Location = new System.Drawing.Point(12, 12);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
             this.dataGridView1.Size = new System.Drawing.Size(776, 350);
             this.dataGridView1.TabIndex = 0;
+            // 
+            // fam
+            // 
+            this.fam.HeaderText = "Фамилия";
+            this.fam.Name = "fam";
+            this.fam.ReadOnly = true;
+            // 
+            // name
+            // 
+            this.name.HeaderText = "Column1";
+            this.name.Name = "name";
+            this.name.ReadOnly = true;
+            // 
+            // lastName
+            // 
+            this.lastName.HeaderText = "Column1";
+            this.lastName.Name = "lastName";
+            this.lastName.ReadOnly = true;
+            // 
+            // doljnost
+            // 
+            this.doljnost.HeaderText = "Column1";
+            this.doljnost.Name = "doljnost";
+            this.doljnost.ReadOnly = true;
+            // 
+            // oklad
+            // 
+            this.oklad.HeaderText = "Column1";
+            this.oklad.Name = "oklad";
+            this.oklad.ReadOnly = true;
+            // 
+            // info
+            // 
+            this.info.HeaderText = "Column1";
+            this.info.Name = "info";
+            this.info.ReadOnly = true;
             // 
             // GodFormActivated
             // 
@@ -59,5 +108,11 @@
         #endregion
 
         private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn fam;
+        private System.Windows.Forms.DataGridViewTextBoxColumn name;
+        private System.Windows.Forms.DataGridViewTextBoxColumn lastName;
+        private System.Windows.Forms.DataGridViewTextBoxColumn doljnost;
+        private System.Windows.Forms.DataGridViewTextBoxColumn oklad;
+        private System.Windows.Forms.DataGridViewTextBoxColumn info;
     }
 }

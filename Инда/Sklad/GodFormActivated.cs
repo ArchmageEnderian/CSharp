@@ -26,19 +26,26 @@ namespace BD
             string connectionString = "server=localhost;user=root;database=inda;password=;";
             MySqlConnection connection = new MySqlConnection(connectionString);
             connection.Open();
-            MySqlDataReader rdr = ReaderStyle(connection, "`Last_name`,`Name`,`Father_name`, `Doljnost`, `Oklad`, rezume.Info", "`soiskateli`");
+            WriteStyle( ReaderStyle(connection, "`Last_name`,`Name`,`Father_name`, `Doljnost`, `Oklad`, rezume.Info", "`soiskateli`", "`rezume` ON soiskateli.id_users = rezume.User") );
          }
         private void WriteStyle(MySqlDataReader read)
         {
             while (read.Read())
             {
-                dataGridView1.Rows.Add(read[0], read[1], read[2]);
+                dataGridView1.Rows.Add(read[0], read[1], read[2], read[3], read[4], read[5]);
             }
             read.Close();
         }
         private MySqlDataReader ReaderStyle(MySqlConnection connection, string postSelect, string postFrom)
         {
             string sql = SELECT + " " + postSelect + " " + FROM + " " + postFrom;
+            MySqlCommand command = new MySqlCommand(sql, connection);
+            MySqlDataReader reader = command.ExecuteReader();
+            return reader;
+        }
+        private MySqlDataReader ReaderStyle(MySqlConnection connection, string postSelect, string postFrom, string postJoin)
+        {
+            string sql = "SELECT `Last_name`,`Name`,`Father_name`, `Doljnost`, `Oklad`, rezume.Info FROM `soiskateli` JOIN `rezume` ON soiskateli.id_users = rezume.User";
             MySqlCommand command = new MySqlCommand(sql, connection);
             MySqlDataReader reader = command.ExecuteReader();
             return reader;
