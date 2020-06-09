@@ -19,7 +19,6 @@ namespace BD
             MySqlDataReader reader = command.ExecuteReader();
             return reader;
         }
-
         string SELECT = "SELECT";
         string WHERE = "WHERE";
         string FROM = "FROM";
@@ -30,6 +29,7 @@ namespace BD
                 string connectionString = "server=localhost;user=root;database=inda;password=;";
                 MySqlConnection connection = new MySqlConnection(connectionString);
                 connection.Open();
+                connection.Close();
             }
             catch
             {
@@ -38,14 +38,6 @@ namespace BD
                 label3.Hide();
                 ErrorLabel.Show();
             }
-            /*
-            ReaderStyle(connection)
-            while (reader.Read())
-            {
-                dataGridView1.Rows.Add(reader[0], reader[1], reader[2]);
-            }
-            reader.Close();
-            */
         }
 
         private void God_Click(object sender, EventArgs e)
