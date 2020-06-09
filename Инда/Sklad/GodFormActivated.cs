@@ -1,4 +1,5 @@
-﻿using System;
+﻿using MySql.Data.MySqlClient;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -8,7 +9,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace Sklad
+namespace BD
 {
     public partial class GodFormActivated : Form
     {
@@ -16,5 +17,8 @@ namespace Sklad
         {
             InitializeComponent();
         }
+        
+
+        // SELECT `Last_name`,`Name`,`Father_name`, `Doljnost`, `Oklad`, rezume.Info FROM `soiskateli` JOIN `rezume` ON soiskateli.id_users = rezume.User
     }
 }

@@ -1,6 +1,6 @@
 ﻿using MySql.Data.MySqlClient;
 
-namespace Sklad
+namespace BD
 {
     class DatabaseManager
     {

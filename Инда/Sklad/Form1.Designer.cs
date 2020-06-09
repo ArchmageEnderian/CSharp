@@ -1,4 +1,4 @@
-﻿namespace Sklad
+﻿namespace BD
 {
     partial class Form1
     {

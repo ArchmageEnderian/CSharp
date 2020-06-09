@@ -2,7 +2,7 @@
 using System;
 using System.Windows.Forms;
 
-namespace Sklad
+namespace BD
 {
     public partial class Form1 : Form
     {
@@ -12,16 +12,17 @@ namespace Sklad
             ErrorLabel.Hide();
             Starter(); 
         }
-        string SELECT = "SELECT";
-        string WHERE = "WHERE";
-        string FROM = "FROM";
-        private MySqlDataReader ReaderStyle(MySqlConnection connection, string postSelect, string postFrom)
+        public MySqlDataReader ReaderStyle(MySqlConnection connection, string postSelect, string postFrom)
         {
             string sql = SELECT + postSelect + FROM + postFrom;
             MySqlCommand command = new MySqlCommand(sql, connection);
             MySqlDataReader reader = command.ExecuteReader();
             return reader;
         }
+
+        string SELECT = "SELECT";
+        string WHERE = "WHERE";
+        string FROM = "FROM";
         public void Starter()
         {
             try
@@ -58,4 +59,5 @@ namespace Sklad
             /* В разработке */
         }
     }
+   
 }
