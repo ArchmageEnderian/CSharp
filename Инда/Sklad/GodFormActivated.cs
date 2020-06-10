@@ -3,6 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.Common;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -27,6 +28,9 @@ namespace BD
         string FROM = "FROM";
         string JOIN = "JOIN";
         string DELETE = "DELETE";
+        string INSERT = "INSERT";
+        string INTO = "INTO";
+        string VALUES = "VALUES";
         private void OpenServer()
         {
             string connectionString = "server=localhost;user=root;database=inda;password=;";
@@ -36,8 +40,7 @@ namespace BD
         private void Strtr()
         {
             OpenServer();
-            WriteStyle( ReaderStyle(connection, "`id_users`,`Last_name`,`Name`,`Father_name`,`Doljnost`,`Oklad`,rezume.Info", "`soiskateli`", "`rezume` ON soiskateli.id_users = rezume.User") );
-            //connection.Close();
+            WriteStyle( ReaderStyle("`id_users`,`Last_name`,`Name`,`Father_name`,`Doljnost`,`Oklad`,rezume.Info", "`soiskateli`", "`rezume` ON soiskateli.id_users = rezume.User") );
         }
         private void WriteStyle(MySqlDataReader read)
         {
@@ -47,14 +50,14 @@ namespace BD
             }
             read.Close();
         }
-        private MySqlDataReader ReaderStyle(MySqlConnection connection, string postSelect, string postFrom)
+        private MySqlDataReader ReaderStyle(string postSelect, string postFrom)
         {
             string sql = SELECT + " " + postSelect + " " + FROM + " " + postFrom;
             MySqlCommand command = new MySqlCommand(sql, connection);
             MySqlDataReader reader = command.ExecuteReader();
             return reader;
         }
-        private MySqlDataReader ReaderStyle(MySqlConnection connection, string postSelect, string postFrom, string postJoin)
+        private MySqlDataReader ReaderStyle(string postSelect, string postFrom, string postJoin)
         {
             string sql = SELECT + " " + postSelect + " " + FROM + " " + postFrom + " " + JOIN + " " + postJoin;
             MySqlCommand command = new MySqlCommand(sql, connection);
@@ -66,17 +69,34 @@ namespace BD
             string sql = DELETE + " " + FROM + " " + postFrom + " " + WHERE + " " + postWhere + " " + idDel.ToString();
             MySqlCommand command = new MySqlCommand(sql, connection);
             command.ExecuteReader();
+        } 
+        /*
+        private void InsertStyle(string table, string table1, string user, string doljnost, string oklad, string staj, string region, string graphic, string info1, string id_users, string last_name, string name, string father_name, string pol, string age, string pasport, string info)
+        {
+            string sql1 = INSERT + " " + INTO + " " + table + " (`id_users`, `Last_name`, `Name`, `Father_name`, `Pol`, `Age`, `Pasport`, `Info`) " + VALUES + " (" + id_users + ", " + last_name + ", " + name + ", " + father_name + ", " + pol + ", " + age + ", " + pasport + ", " + info + ");";
+            string sql2 = INSERT + " " + INTO + " " + table1 + " (`User`, `Doljnost`, `Oklad`, `Staj`, `Region`, `Graphic`, `Info`) " + VALUES + " (" + user + ", " + doljnost + ", " + oklad + ", " + staj + ", " + region + ", " + graphic + ", " + info1 + ");";
+            MySqlCommand command3 = new MySqlCommand(sql1, connection);
+            command3.ExecuteReader();
+            //command3.EndExecuteReader();
+            connection.Close();
+            OpenServer();
+            MySqlCommand command4 = new MySqlCommand(sql2, connection);
+            command4.ExecuteReader();
+        }
+        */
+        private void RefresherOrb()
+        {
+            connection.Close();
+            dataGridView1.Rows.Clear();
+            Strtr();
         }
         private void Refresh_Click(object sender, EventArgs e)
         {
-            dataGridView1.Rows.Clear();
-            Strtr();
-            
+            RefresherOrb();
         }
         private void Add_Click(object sender, EventArgs e)
         {
-            // INSERT INTO `rezume` (`User`, `Doljnost`, `Oklad`, `Staj`, `Region`, `Graphic`, `Info`) VALUES ('34813', 'IT специалист', '150000', '0', 'Компсомолький', '2-2', '16554');
-            // Добавление вакансии в список вакансий
+            //InsertStyle("`soiskateli`", "`rezume`", "'34813'", "'IT специалист'", "'150000'", "'0'", "'Компсомолький'", "'2-2'", "'16554'", "'034813'", "'Малахов'", "'Игорь'", "'Дмитриевич'", "'м'", "'20'", "'1111111111'", "'1685'");
         }
         private void Take_Click(object sender, EventArgs e)
         {
@@ -90,15 +110,14 @@ namespace BD
         }
         private void yesbut_Click(object sender, EventArgs e)
         {
-
             int id = Convert.ToInt32(textBox2.Text);
             try
             {
                 DeleterStyle(connection, id, "`rezume`", "`User` =", "`soiskateli`", "`id_users` =");
-                //string sql = DELETE + " " + FROM + " " + postFrom1 + " " + WHERE + " " + postWhere1 + " " + idDel.ToString();
+                string sql = "DELETE FROM `soiskateli` WHERE `soiskateli`.`id_users` = " +id.ToString();
                 connection.Close();
                 OpenServer();
-                MySqlCommand command2 = new MySqlCommand("DELETE FROM `soiskateli` WHERE `soiskateli`.`id_users` = 34813", connection);
+                MySqlCommand command2 = new MySqlCommand(sql, connection);
                 command2.ExecuteReader();
                 MessageBox.Show("Собеседование назначено!", "Отлично!", MessageBoxButtons.OK, MessageBoxIcon.Information, MessageBoxDefaultButton.Button1);
             }
@@ -106,14 +125,7 @@ namespace BD
             {
                 MessageBox.Show("ОШИБКА!", "ПЛОХО!", MessageBoxButtons.OK, MessageBoxIcon.Error, MessageBoxDefaultButton.Button1);
             }
-            //dataGridView1.Rows.RemoveAt();
-
-            /*  DELETE FROM `rezume` WHERE `User` = 34813
-                DELETE FROM `soiskateli` WHERE `soiskateli`.`id_users` = 34813 */
-
-            //Функция удаления человека из базы
-
-        
+            RefresherOrb();
             Add.Show();
             Refresh.Show();
             Take.Show();
