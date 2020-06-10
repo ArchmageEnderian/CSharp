@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.id = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.fam = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.name = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.lastName = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -51,6 +52,7 @@
             this.dataGridView1.AllowUserToDeleteRows = false;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.id,
             this.fam,
             this.name,
             this.lastName,
@@ -60,8 +62,14 @@
             this.dataGridView1.Location = new System.Drawing.Point(12, 12);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
-            this.dataGridView1.Size = new System.Drawing.Size(647, 350);
+            this.dataGridView1.Size = new System.Drawing.Size(744, 350);
             this.dataGridView1.TabIndex = 0;
+            // 
+            // id
+            // 
+            this.id.HeaderText = "ID Соискателя";
+            this.id.Name = "id";
+            this.id.ReadOnly = true;
             // 
             // fam
             // 
@@ -111,7 +119,7 @@
             // 
             // Add
             // 
-            this.Add.Location = new System.Drawing.Point(275, 368);
+            this.Add.Location = new System.Drawing.Point(346, 368);
             this.Add.Name = "Add";
             this.Add.Size = new System.Drawing.Size(99, 44);
             this.Add.TabIndex = 2;
@@ -121,7 +129,7 @@
             // 
             // Take
             // 
-            this.Take.Location = new System.Drawing.Point(559, 368);
+            this.Take.Location = new System.Drawing.Point(657, 368);
             this.Take.Name = "Take";
             this.Take.Size = new System.Drawing.Size(99, 44);
             this.Take.TabIndex = 3;
@@ -131,14 +139,14 @@
             // 
             // textBox2
             // 
-            this.textBox2.Location = new System.Drawing.Point(487, 392);
+            this.textBox2.Location = new System.Drawing.Point(580, 392);
             this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(66, 20);
+            this.textBox2.Size = new System.Drawing.Size(71, 20);
             this.textBox2.TabIndex = 5;
             // 
             // Otmena
             // 
-            this.Otmena.Location = new System.Drawing.Point(382, 368);
+            this.Otmena.Location = new System.Drawing.Point(472, 368);
             this.Otmena.Name = "Otmena";
             this.Otmena.Size = new System.Drawing.Size(99, 44);
             this.Otmena.TabIndex = 6;
@@ -148,7 +156,7 @@
             // 
             // yesbut
             // 
-            this.yesbut.Location = new System.Drawing.Point(559, 368);
+            this.yesbut.Location = new System.Drawing.Point(657, 368);
             this.yesbut.Name = "yesbut";
             this.yesbut.Size = new System.Drawing.Size(99, 44);
             this.yesbut.TabIndex = 7;
@@ -159,17 +167,17 @@
             // label
             // 
             this.label.AutoSize = true;
-            this.label.Location = new System.Drawing.Point(498, 373);
+            this.label.Location = new System.Drawing.Point(577, 372);
             this.label.Name = "label";
-            this.label.Size = new System.Drawing.Size(44, 13);
+            this.label.Size = new System.Drawing.Size(74, 13);
             this.label.TabIndex = 8;
-            this.label.Text = "Номер:";
+            this.label.Text = "Выберите ID:";
             // 
             // GodFormActivated
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(670, 424);
+            this.ClientSize = new System.Drawing.Size(770, 424);
             this.Controls.Add(this.label);
             this.Controls.Add(this.Otmena);
             this.Controls.Add(this.textBox2);
@@ -189,12 +197,6 @@
         #endregion
 
         private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn fam;
-        private System.Windows.Forms.DataGridViewTextBoxColumn name;
-        private System.Windows.Forms.DataGridViewTextBoxColumn lastName;
-        private System.Windows.Forms.DataGridViewTextBoxColumn doljnost;
-        private System.Windows.Forms.DataGridViewTextBoxColumn oklad;
-        private System.Windows.Forms.DataGridViewTextBoxColumn info;
         private System.Windows.Forms.Button Refresh;
         private System.Windows.Forms.Button Add;
         private System.Windows.Forms.Button Take;
@@ -202,5 +204,12 @@
         private System.Windows.Forms.Button Otmena;
         private System.Windows.Forms.Button yesbut;
         private System.Windows.Forms.Label label;
+        private System.Windows.Forms.DataGridViewTextBoxColumn id;
+        private System.Windows.Forms.DataGridViewTextBoxColumn fam;
+        private System.Windows.Forms.DataGridViewTextBoxColumn name;
+        private System.Windows.Forms.DataGridViewTextBoxColumn lastName;
+        private System.Windows.Forms.DataGridViewTextBoxColumn doljnost;
+        private System.Windows.Forms.DataGridViewTextBoxColumn oklad;
+        private System.Windows.Forms.DataGridViewTextBoxColumn info;
     }
 }
