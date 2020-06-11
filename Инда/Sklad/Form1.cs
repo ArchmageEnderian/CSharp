@@ -1,4 +1,5 @@
 ﻿using MySql.Data.MySqlClient;
+using Sklad;
 using System;
 using System.Windows.Forms;
 
@@ -49,7 +50,9 @@ namespace BD
 
         private void Rab_Click(object sender, EventArgs e)
         {
-            /* В разработке */
+            FindJobAlready job = new FindJobAlready();
+            job.Show();
+            this.Hide();
         }
     }
    

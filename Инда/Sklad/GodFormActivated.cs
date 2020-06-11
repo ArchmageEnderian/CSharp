@@ -43,6 +43,18 @@ namespace BD
         {
             OpenServer();
             WriteStyle(ReaderStyle("`id_users`,`Last_name`,`Name`,`Father_name`,`Doljnost`,`Oklad`,rezume.Info", "`soiskateli`", "`rezume` ON soiskateli.id_users = rezume.User"));
+            connection.Close();
+            OpenServer();
+            WriteStyle1(ReaderStyle("`id_vakansii`,`Doljnost`,`Oklad`,`Opisanie_raboti`" , "`vacansii`"));
+            //SELECT `id_vakansii`,`Doljnost`,`Oklad`,`Opisanie_raboti` FROM `vacansii`WHERE `Company` = 1        
+        }
+        private void WriteStyle1(MySqlDataReader read)
+        {
+            while (read.Read())
+            {
+                dataGridView2.Rows.Add(read[0], read[1], read[2], read[3]);
+            }
+            read.Close();
         }
         private void WriteStyle(MySqlDataReader read)
         {
@@ -54,7 +66,7 @@ namespace BD
         }
         private MySqlDataReader ReaderStyle(string postSelect, string postFrom)
         {
-            string sql = SELECT + " " + postSelect + " " + FROM + " " + postFrom;
+            string sql = SELECT + " " + postSelect + " " + FROM + " " + postFrom + " " + WHERE + " `Company` = 1";
             MySqlCommand command = new MySqlCommand(sql, connection);
             MySqlDataReader reader = command.ExecuteReader();
             return reader;
@@ -72,7 +84,7 @@ namespace BD
             MySqlCommand command = new MySqlCommand(sql, connection);
             command.ExecuteReader();
         }
-        /*
+        /* Код для другой стороны
         private void InsertStyle(string table, string table1, string user, string doljnost, string oklad, string staj, string region, string graphic, string info1, string id_users, string last_name, string name, string father_name, string pol, string age, string pasport, string info)
         {
             //InsertStyle("`soiskateli`", "`rezume`", "'34813'", "'IT специалист'", "'150000'", "'0'", "'Компсомолький'", "'2-2'", "'16554'", "'034813'", "'Малахов'", "'Игорь'", "'Дмитриевич'", "'м'", "'20'", "'1111111111'", "'1685'");
@@ -97,6 +109,7 @@ namespace BD
         {
             connection.Close();
             dataGridView1.Rows.Clear();
+            dataGridView2.Rows.Clear();
             Strtr();
         }
         private void Refresh_Click(object sender, EventArgs e)

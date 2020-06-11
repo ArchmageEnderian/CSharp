@@ -51,3 +51,4 @@ D:\GitKraken\CSharp\Инда\Sklad\obj\Debug\BD.csproj.CopyComplete
 D:\GitKraken\CSharp\Инда\Sklad\obj\Debug\BD.Form1.resources
 D:\GitKraken\CSharp\Инда\Sklad\obj\Debug\BD.GodFormActivated.resources
 D:\GitKraken\CSharp\Инда\Sklad\obj\Debug\BD.AddVacan.resources
+D:\GitKraken\CSharp\Инда\Sklad\obj\Debug\Sklad.FindJobAlready.resources
