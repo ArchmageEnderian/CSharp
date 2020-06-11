@@ -57,3 +57,4 @@ D:\GitKraken\CSharp\Инда\Sklad\bin\Debug\AxInterop.WMPLib.dll
 D:\GitKraken\CSharp\Инда\Sklad\obj\Debug\Interop.WMPLib.dll
 D:\GitKraken\CSharp\Инда\Sklad\obj\Debug\AxInterop.WMPLib.dll
 D:\GitKraken\CSharp\Инда\Sklad\obj\Debug\BD.csproj.ResolveComReference.cache
+D:\GitKraken\CSharp\Инда\Sklad\obj\Debug\Sklad.FJAdd.resources

@@ -89,7 +89,7 @@ namespace Sklad
 
         private void FindJobAlready_Load(object sender, EventArgs e)
         {
-            /* НЕ НУЖНОЕ ПОЛЕ */
+            /* НЕ НУЖНОЕ ПОЛЕ    */
         }
 
         private void Sender_Click(object sender, EventArgs e)
@@ -122,7 +122,8 @@ namespace Sklad
 
         private void Rezume_Click(object sender, EventArgs e)
         {
-
+            FJAdd fja = new FJAdd();
+            fja.Show();
         }
     }
 }
