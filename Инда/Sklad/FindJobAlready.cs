@@ -1,12 +1,5 @@
 ﻿using MySql.Data.MySqlClient;
 using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace Sklad
@@ -17,6 +10,11 @@ namespace Sklad
         {
             InitializeComponent();
             Strtr();
+            axWindowsMediaPlayer1.Hide();
+            Otmena.Hide();
+            label.Hide();
+            Poslat.Hide();
+            textBox.Hide();
         }
         MySqlConnection connection;
         string SELECT = "SELECT";
@@ -85,6 +83,44 @@ namespace Sklad
         }
 
         private void raeTdnApiR_Click(object sender, EventArgs e)
+        {
+            axWindowsMediaPlayer1.openPlayer(@"C:\Users\Enderian\Desktop\Mick Gordon - Rip And Tear.mp3");
+        }
+
+        private void FindJobAlready_Load(object sender, EventArgs e)
+        {
+            /* НЕ НУЖНОЕ ПОЛЕ */
+        }
+
+        private void Sender_Click(object sender, EventArgs e)
+        {
+            Sender.Hide();
+            Otmena.Show();
+            label.Show();
+            Poslat.Show();
+            Rezume.Hide();
+            textBox.Show();
+        }
+
+        private void Otmena_Click(object sender, EventArgs e)
+        {
+            Rezume.Show();
+            Poslat.Hide();
+            Sender.Show();
+            Otmena.Hide();
+            label.Hide();
+            Poslat.Hide();
+            textBox.Hide();
+        }
+
+        private void Poslat_Click(object sender, EventArgs e)
+        {
+            int id = System.Convert.ToInt32(textBox.Text);
+            /* */
+            MessageBox.Show("Заявка отправлена!", "Успех!");
+        }
+
+        private void Rezume_Click(object sender, EventArgs e)
         {
 
         }

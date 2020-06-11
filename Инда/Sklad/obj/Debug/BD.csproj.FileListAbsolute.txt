@@ -52,3 +52,8 @@ D:\GitKraken\CSharp\Инда\Sklad\obj\Debug\BD.Form1.resources
 D:\GitKraken\CSharp\Инда\Sklad\obj\Debug\BD.GodFormActivated.resources
 D:\GitKraken\CSharp\Инда\Sklad\obj\Debug\BD.AddVacan.resources
 D:\GitKraken\CSharp\Инда\Sklad\obj\Debug\Sklad.FindJobAlready.resources
+D:\GitKraken\CSharp\Инда\Sklad\bin\Debug\Interop.WMPLib.dll
+D:\GitKraken\CSharp\Инда\Sklad\bin\Debug\AxInterop.WMPLib.dll
+D:\GitKraken\CSharp\Инда\Sklad\obj\Debug\Interop.WMPLib.dll
+D:\GitKraken\CSharp\Инда\Sklad\obj\Debug\AxInterop.WMPLib.dll
+D:\GitKraken\CSharp\Инда\Sklad\obj\Debug\BD.csproj.ResolveComReference.cache

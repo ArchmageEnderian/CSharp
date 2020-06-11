@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FindJobAlready));
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.raeTdnApiR = new System.Windows.Forms.Button();
             this.id_vakansii = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -37,7 +38,15 @@
             this.Company = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Region = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Opisanie_raboti = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.axWindowsMediaPlayer1 = new AxWMPLib.AxWindowsMediaPlayer();
+            this.Rezume = new System.Windows.Forms.Button();
+            this.Sender = new System.Windows.Forms.Button();
+            this.textBox = new System.Windows.Forms.TextBox();
+            this.Otmena = new System.Windows.Forms.Button();
+            this.label = new System.Windows.Forms.Label();
+            this.Poslat = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.axWindowsMediaPlayer1)).BeginInit();
             this.SuspendLayout();
             // 
             // dataGridView1
@@ -111,17 +120,92 @@
             this.Opisanie_raboti.Name = "Opisanie_raboti";
             this.Opisanie_raboti.ReadOnly = true;
             // 
+            // axWindowsMediaPlayer1
+            // 
+            this.axWindowsMediaPlayer1.Enabled = true;
+            this.axWindowsMediaPlayer1.Location = new System.Drawing.Point(904, 523);
+            this.axWindowsMediaPlayer1.Name = "axWindowsMediaPlayer1";
+            this.axWindowsMediaPlayer1.OcxState = ((System.Windows.Forms.AxHost.State)(resources.GetObject("axWindowsMediaPlayer1.OcxState")));
+            this.axWindowsMediaPlayer1.Size = new System.Drawing.Size(27, 15);
+            this.axWindowsMediaPlayer1.TabIndex = 2;
+            // 
+            // Rezume
+            // 
+            this.Rezume.Location = new System.Drawing.Point(12, 379);
+            this.Rezume.Name = "Rezume";
+            this.Rezume.Size = new System.Drawing.Size(100, 37);
+            this.Rezume.TabIndex = 3;
+            this.Rezume.Text = "Создать резюме";
+            this.Rezume.UseVisualStyleBackColor = true;
+            this.Rezume.Click += new System.EventHandler(this.Rezume_Click);
+            // 
+            // Sender
+            // 
+            this.Sender.Location = new System.Drawing.Point(653, 379);
+            this.Sender.Name = "Sender";
+            this.Sender.Size = new System.Drawing.Size(103, 37);
+            this.Sender.TabIndex = 4;
+            this.Sender.Text = "Предложить свое резюме!";
+            this.Sender.UseVisualStyleBackColor = true;
+            this.Sender.Click += new System.EventHandler(this.Sender_Click);
+            // 
+            // textBox
+            // 
+            this.textBox.Location = new System.Drawing.Point(567, 396);
+            this.textBox.Name = "textBox";
+            this.textBox.Size = new System.Drawing.Size(80, 20);
+            this.textBox.TabIndex = 5;
+            // 
+            // Otmena
+            // 
+            this.Otmena.Location = new System.Drawing.Point(458, 379);
+            this.Otmena.Name = "Otmena";
+            this.Otmena.Size = new System.Drawing.Size(103, 37);
+            this.Otmena.TabIndex = 6;
+            this.Otmena.Text = "Отмена";
+            this.Otmena.UseVisualStyleBackColor = true;
+            this.Otmena.Click += new System.EventHandler(this.Otmena_Click);
+            // 
+            // label
+            // 
+            this.label.AutoSize = true;
+            this.label.Location = new System.Drawing.Point(586, 379);
+            this.label.Name = "label";
+            this.label.Size = new System.Drawing.Size(44, 13);
+            this.label.TabIndex = 7;
+            this.label.Text = "Номер:";
+            // 
+            // Poslat
+            // 
+            this.Poslat.Location = new System.Drawing.Point(653, 379);
+            this.Poslat.Name = "Poslat";
+            this.Poslat.Size = new System.Drawing.Size(103, 37);
+            this.Poslat.TabIndex = 8;
+            this.Poslat.Text = "Послать Резюме!";
+            this.Poslat.UseVisualStyleBackColor = true;
+            this.Poslat.Click += new System.EventHandler(this.Poslat_Click);
+            // 
             // FindJobAlready
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(769, 418);
+            this.ClientSize = new System.Drawing.Size(768, 428);
+            this.Controls.Add(this.label);
+            this.Controls.Add(this.Otmena);
+            this.Controls.Add(this.textBox);
+            this.Controls.Add(this.Rezume);
+            this.Controls.Add(this.axWindowsMediaPlayer1);
             this.Controls.Add(this.raeTdnApiR);
             this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.Sender);
+            this.Controls.Add(this.Poslat);
             this.Name = "FindJobAlready";
             this.Text = "FindJobAlready";
+            this.Load += new System.EventHandler(this.FindJobAlready_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.axWindowsMediaPlayer1)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -136,5 +220,12 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Company;
         private System.Windows.Forms.DataGridViewTextBoxColumn Region;
         private System.Windows.Forms.DataGridViewTextBoxColumn Opisanie_raboti;
+        private AxWMPLib.AxWindowsMediaPlayer axWindowsMediaPlayer1;
+        private System.Windows.Forms.Button Rezume;
+        private System.Windows.Forms.Button Sender;
+        private System.Windows.Forms.TextBox textBox;
+        private System.Windows.Forms.Button Otmena;
+        private System.Windows.Forms.Label label;
+        private System.Windows.Forms.Button Poslat;
     }
 }
