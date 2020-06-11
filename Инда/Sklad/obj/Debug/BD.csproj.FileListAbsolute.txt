@@ -26,8 +26,6 @@ C:\Users\Enderian\Desktop\Инда\Sklad\obj\Debug\Sklad.pdb
 C:\Users\Enderian\Desktop\Инда\Sklad\obj\Debug\Sklad.GodFormActivated.resources
 D:\GitKraken\CSharp\Инда\Sklad\obj\Debug\BD.csprojAssemblyReference.cache
 D:\GitKraken\CSharp\Инда\Sklad\obj\Debug\Sklad.exe.config
-D:\GitKraken\CSharp\Инда\Sklad\obj\Debug\BD.Form1.resources
-D:\GitKraken\CSharp\Инда\Sklad\obj\Debug\BD.GodFormActivated.resources
 D:\GitKraken\CSharp\Инда\Sklad\obj\Debug\Sklad.Properties.Resources.resources
 D:\GitKraken\CSharp\Инда\Sklad\obj\Debug\BD.csproj.GenerateResource.cache
 D:\GitKraken\CSharp\Инда\Sklad\obj\Debug\BD.csproj.CoreCompileInputs.cache
@@ -50,3 +48,6 @@ D:\GitKraken\CSharp\Инда\Sklad\bin\Debug\System.Runtime.CompilerServices.Uns
 D:\GitKraken\CSharp\Инда\Sklad\bin\Debug\System.Numerics.Vectors.dll
 D:\GitKraken\CSharp\Инда\Sklad\bin\Debug\MySql.Data.xml
 D:\GitKraken\CSharp\Инда\Sklad\obj\Debug\BD.csproj.CopyComplete
+D:\GitKraken\CSharp\Инда\Sklad\obj\Debug\BD.Form1.resources
+D:\GitKraken\CSharp\Инда\Sklad\obj\Debug\BD.GodFormActivated.resources
+D:\GitKraken\CSharp\Инда\Sklad\obj\Debug\BD.AddVacan.resources

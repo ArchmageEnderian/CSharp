@@ -44,6 +44,7 @@ namespace BD
         {
             GodFormActivated god = new GodFormActivated();
             god.Show();
+            this.Hide();
         }
 
         private void Rab_Click(object sender, EventArgs e)
