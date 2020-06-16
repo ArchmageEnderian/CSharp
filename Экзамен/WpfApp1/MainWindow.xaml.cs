@@ -24,17 +24,21 @@ namespace WpfApp1
         public MainWindow()
         {
             InitializeComponent();
+        }
+
+        private void Starter_Click(object sender, RoutedEventArgs e)
+        {
             SQL_Class.SQL_Starter();
-            /*
-            string connectionString = "server=localhost;user=root;database=inda;password=0000;";
-            MySqlConnection connection = new MySqlConnection(connectionString);
-            connection.Open();
-            string sql = "";
-            MySqlCommand command = new MySqlCommand(sql, connection);
-               
-            command.ExecuteNonQuery();
-            connection.Close();
-            */
+            if (SQL_Class.OPENED)
+            {
+                MainForm forma = new MainForm();
+                forma.Show();
+                this.Close();
+            }
+            else
+            {
+                this.Close();
+            }
         }
     }
 }

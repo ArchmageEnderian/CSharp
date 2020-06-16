@@ -28,3 +28,7 @@ D:\GitKraken\CSharp\Экзамен\WpfApp1\obj\Debug\Экзамен2.csproj.Core
 D:\GitKraken\CSharp\Экзамен\WpfApp1\obj\Debug\Экзамен2.csproj.CopyComplete
 D:\GitKraken\CSharp\Экзамен\WpfApp1\obj\Debug\WpfApp1.exe
 D:\GitKraken\CSharp\Экзамен\WpfApp1\obj\Debug\WpfApp1.pdb
+D:\GitKraken\CSharp\Экзамен\WpfApp1\obj\Debug\AboutMe.g.cs
+D:\GitKraken\CSharp\Экзамен\WpfApp1\obj\Debug\MainForm.g.cs
+D:\GitKraken\CSharp\Экзамен\WpfApp1\obj\Debug\AboutMe.baml
+D:\GitKraken\CSharp\Экзамен\WpfApp1\obj\Debug\MainForm.baml
