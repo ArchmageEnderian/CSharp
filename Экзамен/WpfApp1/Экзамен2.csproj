@@ -120,5 +120,11 @@
   <ItemGroup>
     <Resource Include="Histoire.png" />
   </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Heart.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="MeMeMe.jpg" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

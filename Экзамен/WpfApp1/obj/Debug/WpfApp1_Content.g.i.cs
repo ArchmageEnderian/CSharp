@@ -8,6 +8,6 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("histoire.png")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("mememe.jpg")]
 
 

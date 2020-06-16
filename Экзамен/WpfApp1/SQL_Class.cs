@@ -28,5 +28,14 @@ namespace WpfApp1
                 MessageBox.Show(ex.ToString(), "Ошибка!");
             }
         }
+        public static void SQL_OpenServer()
+        {
+            connection = new MySqlConnection(connectionString);
+            connection.Open();
+        }
+        public static void SQL_CloseServer()
+        {
+            connection.Close();
+        }
     }
 }

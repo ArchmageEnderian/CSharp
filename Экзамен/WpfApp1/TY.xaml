@@ -5,22 +5,30 @@ Title="Windows" Height="300" Width="300"
 WindowStyle="None" AllowsTransparency="true" HorizontalAlignment="Center" VerticalAlignment="Center" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" WindowStartupLocation="CenterScreen"
 >
     <Window.Background>
-        <ImageBrush ImageSource="Histoire.png"></ImageBrush>
+        <ImageBrush ImageSource="Heart.png"></ImageBrush>
     </Window.Background>
     <Grid>
         <Grid.RowDefinitions>
-            <RowDefinition></RowDefinition>
-            <RowDefinition></RowDefinition>
-            <RowDefinition></RowDefinition>
-            <RowDefinition></RowDefinition>
+            <RowDefinition Height="113*"></RowDefinition>
+            <RowDefinition Height="72*"></RowDefinition>
+            <RowDefinition Height="70*"></RowDefinition>
+            <RowDefinition Height="45*"></RowDefinition>
         </Grid.RowDefinitions>
         <!--<Button Content="Вернуться" Click="Back_Click" Height="25" Grid.Row="2" Cursor="Hand" Margin="119,16,119,35"/>-->
-        <Image Source="Histoire.png" Grid.Row="0"/>
-        <TextBlock Text="Программу сделал:" Grid.Row="1" HorizontalAlignment="Center" Margin="64,0,64,55" Foreground="#FFDEE636"/>
-        <TextBlock Text="Студент 29 группы" Grid.Row="1" HorizontalAlignment="Center" Margin="98,20,97,35" Foreground="#FFDEE636" Width="105"/>
-        <TextBlock Text="Михаелян Л.Т." Grid.Row="1" HorizontalAlignment="Center" Margin="110,40,110,15" Foreground="#FFDEE636"/>
-        <TextBlock Text="Связь: 5novel5@mail.ru" Grid.Row="1" HorizontalAlignment="Center" Margin="87,60,86,70" Foreground="#FFDEE636" Grid.RowSpan="2"/>
-        <Button Width="50" Height="50" Content="OK" Grid.Row="2">
+        <Image Source="MeMeMe.jpg" Grid.Row="0" RenderTransformOrigin="0.5,0.5">
+            <Image.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="0.441"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </Image.RenderTransform>
+        </Image>
+        <TextBlock Text="Программу сделал:" Grid.Row="1" HorizontalAlignment="Center" Margin="97,1,97,49" Foreground="ForestGreen" Width="106"/>
+        <TextBlock Text="Студент 29 группы" Grid.Row="1" HorizontalAlignment="Center" Margin="98,26,97,25" Foreground="ForestGreen" Width="105"/>
+        <TextBlock Text="Малахов И.Д." Grid.Row="1" HorizontalAlignment="Center" Margin="113,50,113,0" Foreground="ForestGreen" Width="74"/>
+        <Button Content="OK" Grid.Row="2" Margin="125,12,125,13" Click="Button_Click">
             <Button.Template>
                 <ControlTemplate TargetType="Button">
                     <Grid>

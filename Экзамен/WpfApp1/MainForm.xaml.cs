@@ -1,4 +1,5 @@
-﻿using System;
+﻿using MySql.Data.MySqlClient;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -22,12 +23,33 @@ namespace WpfApp1
         public MainForm()
         {
             InitializeComponent();
+            SQL_Class.SQL_OpenServer();
+        }
+        private void MainForm_Closing(object sender, System.ComponentModel.CancelEventArgs e)
+        {
+
         }
 
-        private void CheckBox_Checked(object sender, RoutedEventArgs e)
+        private void BlueSide(object sender, RoutedEventArgs e)
         {
-            TY thx = new TY();
-            thx.Show();
+            
+            
         }
+        private void SaveFile(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void ComboBox_Loaded(object sender, RoutedEventArgs e)
+        {
+
+        }
+        private void ProcLoad(object sender, RoutedEventArgs e)
+        {
+            var combo = sender as ComboBox;
+
+        }
+        /* TY thx = new TY();
+   thx.Show(); */
     }
 }

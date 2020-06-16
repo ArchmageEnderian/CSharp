@@ -5,9 +5,37 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:WpfApp1"
         mc:Ignorable="d"
-        Title="MainForm" Height="450" Width="800">
+        Title="MainForm" Height="252.551" Width="800">
     <Grid>
-        <CheckBox Content="Проверять совместимость?" HorizontalAlignment="Left" Height="21" Margin="606,10,0,0" VerticalAlignment="Top" Width="176" Checked="CheckBox_Checked"/>
+        <CheckBox x:Name="BlueBox" Content="Проверять совместимость" HorizontalAlignment="Left" Height="19" Margin="610,36,0,0" VerticalAlignment="Top" Width="172" Checked="BlueSide"/>
+        <Menu HorizontalAlignment="Left" Height="31" VerticalAlignment="Top" Width="792">
+            <MenuItem Header="Конфигурация" Height="31" Width="100">
+                <Button x:Name="SaveBut" Content="Сохранить сборку?" Click="SaveFile"/>
+            </MenuItem>
 
+        </Menu>
+
+        <ComboBox Loaded="ProcLoad" HorizontalAlignment="Left" Height="30" Margin="146,36,0,0" VerticalAlignment="Top" Width="459">
+            <ScrollViewer Height="100" Width="450"/>
+        </ComboBox>
+        <Label Content="Процессор" HorizontalAlignment="Left" Height="30" Margin="10,36,0,0" VerticalAlignment="Top" Width="131"/>
+        <Label Content="Материнская плата" HorizontalAlignment="Left" Height="30" Margin="10,66,0,0" VerticalAlignment="Top" Width="131"/>
+        <ComboBox HorizontalAlignment="Left" Height="30" Margin="146,66,0,0" VerticalAlignment="Top" Width="459">
+            <ScrollViewer Height="100" Width="450"/>
+        </ComboBox>
+        <Label Content="Видеокарта" HorizontalAlignment="Left" Height="30" Margin="10,96,0,0" VerticalAlignment="Top" Width="131"/>
+        <Label Content="Оперативная память" HorizontalAlignment="Left" Height="30" Margin="10,126,0,0" VerticalAlignment="Top" Width="131"/>
+        <ComboBox HorizontalAlignment="Left" Height="30" Margin="146,96,0,0" VerticalAlignment="Top" Width="459">
+            <ScrollViewer Height="100" Width="450"/>
+        </ComboBox>
+        <ComboBox HorizontalAlignment="Left" Height="30" Margin="146,126,0,0" VerticalAlignment="Top" Width="459">
+            <ScrollViewer Height="100" Width="450"/>
+        </ComboBox>
+        <Label Content="Хранилище данных" HorizontalAlignment="Left" Height="30" Margin="10,156,0,0" VerticalAlignment="Top" Width="131"/>
+        <Label Content="Блок питания" HorizontalAlignment="Left" Height="30" Margin="10,186,0,0" VerticalAlignment="Top" Width="136"/>
+        <ComboBox HorizontalAlignment="Left" Height="30" Margin="146,156,0,0" VerticalAlignment="Top" Width="459"/>
+        <ComboBox HorizontalAlignment="Left" Height="26" Margin="146,186,0,0" VerticalAlignment="Top" Width="459">
+            <ScrollViewer Height="100" Width="449"/>
+        </ComboBox>
     </Grid>
 </Window>
