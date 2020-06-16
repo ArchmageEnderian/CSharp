@@ -5,8 +5,11 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:WpfApp1"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
-    <Grid>
-        
+        Title="Сборка ПК" Height="254.001" Width="322.001">
+    <Grid Margin="0,0,0,-1">
+        <Image HorizontalAlignment="Left" Height="118" Margin="98,10,0,0" VerticalAlignment="Top" Width="112" Source="Histoire.png"/>
+        <Button Content="Собрать ПК!" HorizontalAlignment="Left" Height="29" Margin="10,172,0,0" VerticalAlignment="Top" Width="285"/>
+        <Label Content="               Собери свой ПК прямо сейчас!" HorizontalAlignment="Left" Height="24" Margin="10,143,0,0" VerticalAlignment="Top" Width="285"/>
+
     </Grid>
 </Window>
