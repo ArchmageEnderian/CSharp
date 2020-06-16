@@ -7,7 +7,7 @@
         mc:Ignorable="d"
         Title="Сборка ПК" Height="347.001" Width="319.001">
     <Grid Margin="0,0,0,-1">
-        <Image HorizontalAlignment="Left" Height="230" Margin="10,10,0,0" VerticalAlignment="Top" Width="189" Source="Histoire.png"/>
+        <Image HorizontalAlignment="Left" Height="230" Margin="58,10,0,0" VerticalAlignment="Top" Width="189" Source="Histoire.png"/>
         <Button Content="Собрать ПК!" HorizontalAlignment="Left" Height="29" Margin="10,274,0,0" VerticalAlignment="Top" Width="285" Click="Starter_Click"/>
         <Label Content="               Собери свой ПК прямо сейчас!" HorizontalAlignment="Left" Height="24" Margin="10,245,0,0" VerticalAlignment="Top" Width="285"/>
 

@@ -15,19 +15,13 @@ using System.Windows.Shapes;
 namespace WpfApp1
 {
     /// <summary>
-    /// Логика взаимодействия для MainForm.xaml
+    /// Логика взаимодействия для TY.xaml
     /// </summary>
-    public partial class MainForm : Window
+    public partial class TY : Window
     {
-        public MainForm()
+        public TY()
         {
             InitializeComponent();
-        }
-
-        private void CheckBox_Checked(object sender, RoutedEventArgs e)
-        {
-            TY thx = new TY();
-            thx.Show();
         }
     }
 }

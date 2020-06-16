@@ -32,3 +32,5 @@ D:\GitKraken\CSharp\Экзамен\WpfApp1\obj\Debug\AboutMe.g.cs
 D:\GitKraken\CSharp\Экзамен\WpfApp1\obj\Debug\MainForm.g.cs
 D:\GitKraken\CSharp\Экзамен\WpfApp1\obj\Debug\AboutMe.baml
 D:\GitKraken\CSharp\Экзамен\WpfApp1\obj\Debug\MainForm.baml
+D:\GitKraken\CSharp\Экзамен\WpfApp1\obj\Debug\TY.baml
+D:\GitKraken\CSharp\Экзамен\WpfApp1\obj\Debug\TY.g.cs
