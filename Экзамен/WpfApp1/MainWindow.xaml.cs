@@ -20,11 +20,47 @@ namespace WpfApp1
     /// Логика взаимодействия для MainWindow.xaml
     /// </summary>
     /// 
+
     public partial class MainWindow : Window
     {
+        delegate void Message();
         public MainWindow()
         {
             InitializeComponent();
+            Message mes = GoodMorning;
+            if (DateTime.Now.Hour >= 6 && DateTime.Now.Hour < 12)
+            {
+                mes = GoodMorning;
+            }
+            if (DateTime.Now.Hour >= 12 && DateTime.Now.Hour < 16)
+            {
+                mes = GoodAfternoon;
+            }
+            if (DateTime.Now.Hour >= 16 && DateTime.Now.Hour <= 24)
+            {
+                mes = GoodEvening;
+            }
+            if (DateTime.Now.Hour >= 0 && DateTime.Now.Hour < 6)
+            {
+                mes = GoodNight;
+            }
+            mes();
+        }
+        private static void GoodMorning()
+        {
+            MessageBox.Show("Доброе утро");
+        }
+        private static void GoodAfternoon()
+        {
+            MessageBox.Show("Добрый день");
+        }
+        private static void GoodEvening()
+        {
+            MessageBox.Show("Добрый вечер");
+        }
+        private static void GoodNight()
+        {
+            MessageBox.Show("Доброй ночи");
         }
 
         private void Starter_Click(object sender, RoutedEventArgs e)

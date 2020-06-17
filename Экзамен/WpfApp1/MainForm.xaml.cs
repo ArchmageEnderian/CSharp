@@ -169,7 +169,44 @@ namespace WpfApp1
             TY thx = new TY();
             thx.Show();
         }
-        /* TY thx = new TY();
-thx.Show(); */
+        interface IFire
+        {
+            void Fst();
+            void Scnd();
+            void Thrt();
+        }
+        class FireWorks : IFire
+        {
+            public void Fst()
+            {
+                MessageBox.Show("Ба-бах", "Пиу");
+            }
+            public void Scnd()
+            {
+                MessageBox.Show("Ба-бах", "Пиу");
+            }
+            public void Thrt()
+            {
+                MessageBox.Show("Ба-бах", "Пиу");
+            }
+        }
+
+        class ImpFireWorks : FireWorks
+        {
+            public void NeverMore()
+            {
+                MessageBox.Show("Ба-бах-бах-бааах", "Пиу");
+            }
+        }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            IFire canonfire = new FireWorks();
+            canonfire.Fst();
+            canonfire.Scnd();
+            canonfire.Thrt();
+            ImpFireWorks newfire = new ImpFireWorks();
+            newfire.NeverMore();
+        }
     }
 }

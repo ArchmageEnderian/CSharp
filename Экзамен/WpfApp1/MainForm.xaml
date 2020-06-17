@@ -24,6 +24,7 @@
                     <TextBlock Height="148" Foreground="White"><Run Text="Символ @ (эт) называют"/><LineBreak/><Run Text=" 'собакой' только в странах"/><LineBreak/><Run Text=" бывшего Советского Союза,"/><LineBreak/><Run Text=" в большинстве других языков"/><LineBreak/><Run Text=" этот символ называют "/><LineBreak/><Run Text="'улиткой' или 'обезьянкой'."/></TextBlock>
                 </StackPanel>
             </Expander>
+            <Button Content="Фейерверк" HorizontalAlignment="Left" Height="55" Margin="968,0,0,0" Width="67" Click="Button_Click"/>
         </StackPanel>
         <Menu HorizontalAlignment="Left" Height="31" VerticalAlignment="Top" Width="1064">
             <MenuItem Header="Конфигурация" Height="31" Width="100" Click="SaveFile" InputGestureText="ctrl+o">
