@@ -5,7 +5,8 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:WpfApp1"
         mc:Ignorable="d"
-        Title="MainForm" Height="569.388" Width="1072.066" Closing="MainForm_Closing">
+        Title="MainForm" Height="569.388" Width="1072.066" Closing="MainForm_Closing" KeyDown="MainForm_KeyDown">
+   
     <Window.Background>
         <ImageBrush ImageSource="Fon2.png"></ImageBrush>
     </Window.Background>
@@ -17,14 +18,27 @@
                     Спасибо metanit.com, ты спасаешь мой день!
                 </TextBlock>
             </Popup>
+            <Expander Header="А вы знали?" HorizontalAlignment="Left" Height="171" Margin="681,0,0,0" Width="172">
+                <StackPanel>
+                    <Grid Background="LightCyan"/>
+                    <TextBlock Height="148" Foreground="White"><Run Text="Символ @ (эт) называют"/><LineBreak/><Run Text=" 'собакой' только в странах"/><LineBreak/><Run Text=" бывшего Советского Союза,"/><LineBreak/><Run Text=" в большинстве других языков"/><LineBreak/><Run Text=" этот символ называют "/><LineBreak/><Run Text="'улиткой' или 'обезьянкой'."/></TextBlock>
+                </StackPanel>
+            </Expander>
         </StackPanel>
-                <Menu HorizontalAlignment="Left" Height="31" VerticalAlignment="Top" Width="1064">
-            <MenuItem Header="Конфигурация" Height="31" Width="100">
+        <Menu HorizontalAlignment="Left" Height="31" VerticalAlignment="Top" Width="1064">
+            <MenuItem Header="Конфигурация" Height="31" Width="100" Click="SaveFile" InputGestureText="ctrl+o">
+                <MenuItem.InputBindings>
+                    <KeyBinding Key="S" Modifiers="control"/>
+                </MenuItem.InputBindings>
                 <Button x:Name="SaveBut" Content="Сохранить сборку" Click="SaveFile"/>
                 <Button x:Name="LoadBut" Content="Загрузить сборку" Click="LoadFile"/>
                 <!--<Закончить тут>-->
             </MenuItem>
+
             <MenuItem Header="О разработчике" Height="31" Width="100" Click="AboutMe"/>
+
+
+
         </Menu>
 
         <Label Content="Процессор" HorizontalAlignment="Left" Height="77" Margin="10,36,0,0" VerticalAlignment="Top" Foreground="ForestGreen" Width="249" FontSize="24" FontFamily="Times New Roman"/>

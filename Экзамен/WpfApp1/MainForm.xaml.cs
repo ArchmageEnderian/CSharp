@@ -25,6 +25,22 @@ namespace WpfApp1
         {
             InitializeComponent();
             SQL_Class.SQL_OpenServer();
+            
+        }
+        private void MainForm_Load(object sender, EventArgs e)
+        {
+            
+        }
+        private void MainForm_KeyDown(object sender, KeyEventArgs e)
+        {
+            if(e.Key == Key.O)
+            {
+                SaveFile();
+            }
+            if (e.Key == Key.L)
+            {
+                LoadFile();
+            }
         }
         private string sql;
         private bool factor = false;
@@ -32,22 +48,28 @@ namespace WpfApp1
         public static bool BOOLER = false;
         private void MainForm_Closing(object sender, System.ComponentModel.CancelEventArgs e)
         {
-
             Exit ex = new Exit();
             ex.Show();
         }
-
         private void BlueSide(object sender, RoutedEventArgs e)
         {
           factor = true;
         }
         private void SaveFile(object sender, RoutedEventArgs e)
         {
-
+            SaveFile();
+        }
+        private void SaveFile()
+        {
+            MessageBox.Show("Успех! (В раазработке)", "Успех");
+        }
+        private void LoadFile()
+        {
+            MessageBox.Show("Успех! (В раазработке)", "Успех");
         }
         private void LoadFile(object sender, RoutedEventArgs e)
         {
-
+            LoadFile();
         }
         private void Button_MouseEnter_1(object sender, MouseEventArgs e)
         {
