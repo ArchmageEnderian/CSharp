@@ -59,6 +59,10 @@
     <Compile Include="AboutMe.xaml.cs">
       <DependentUpon>AboutMe.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Exit.xaml.cs">
+      <DependentUpon>Exit.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="GlobalDataBase.cs" />
     <Compile Include="MainForm.xaml.cs">
       <DependentUpon>MainForm.xaml</DependentUpon>
     </Compile>
@@ -67,6 +71,10 @@
       <DependentUpon>TY.xaml</DependentUpon>
     </Compile>
     <Page Include="AboutMe.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Exit.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -125,6 +133,12 @@
   </ItemGroup>
   <ItemGroup>
     <Resource Include="MeMeMe.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Fon.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Fon2.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

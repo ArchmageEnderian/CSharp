@@ -5,44 +5,39 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:WpfApp1"
         mc:Ignorable="d"
-        Title="MainForm" Height="252.551" Width="800">
+        Title="MainForm" Height="569.388" Width="1072.066" Closing="MainForm_Closing">
+    <Window.Background>
+        <ImageBrush ImageSource="Fon2.png"></ImageBrush>
+    </Window.Background>
     <Grid>
-        <CheckBox x:Name="BlueBox" Content="Проверять совместимость" HorizontalAlignment="Left" Height="19" Margin="610,36,0,0" VerticalAlignment="Top" Width="172" Checked="BlueSide"/>
-        <Menu HorizontalAlignment="Left" Height="31" VerticalAlignment="Top" Width="792">
+        <CheckBox x:Name="BlueBox" Content="Проверять совместимость" HorizontalAlignment="Left" Height="19" Margin="681,42,0,0" VerticalAlignment="Top" Width="172" Checked="BlueSide"/>
+        <Menu HorizontalAlignment="Left" Height="31" VerticalAlignment="Top" Width="1064">
             <MenuItem Header="Конфигурация" Height="31" Width="100">
-                <Button x:Name="SaveBut" Content="Сохранить сборку?" Click="SaveFile"/>
+                <Button x:Name="SaveBut" Content="Сохранить сборку" Click="SaveFile"/>
+                <Button x:Name="LoadBut" Content="Загрузить сборку" Click="LoadFile"/>
+                <!--<Закончить тут>-->
             </MenuItem>
-
+            <MenuItem Header="О разработчике" Height="31" Width="100" Click="AboutMe"/>
         </Menu>
 
+        <Label Content="Процессор" HorizontalAlignment="Left" Height="77" Margin="10,36,0,0" VerticalAlignment="Top" Foreground="ForestGreen" Width="249" FontSize="24" FontFamily="Times New Roman"/>
+        <Label Content="Материнская плата" HorizontalAlignment="Left" Height="76" Margin="10,113,0,0" VerticalAlignment="Top" Foreground="ForestGreen" Width="249" FontSize="24" FontFamily="Times New Roman"/>
+        <Label Content="Видеокарта" HorizontalAlignment="Left" Height="77" Margin="10,189,0,0" VerticalAlignment="Top" Foreground="ForestGreen" Width="249" FontSize="24" FontFamily="Times New Roman"/>
+        <Label Content="Оперативная память" HorizontalAlignment="Left" Height="77" Margin="10,266,0,0" VerticalAlignment="Top" Foreground="ForestGreen" Width="249" FontSize="24" FontFamily="Times New Roman"/>
+        <Label Content="Хранилище данных" HorizontalAlignment="Left" Height="76" Margin="10,343,0,0" VerticalAlignment="Top" Foreground="ForestGreen" Width="249" FontSize="24" FontFamily="Times New Roman"/>
+        <Label Content="Блок питания" HorizontalAlignment="Left" Height="77" Margin="10,419,0,0" VerticalAlignment="Top" Foreground="ForestGreen" Width="249" FontSize="24" FontFamily="Times New Roman"/>
 
-
-        <Label Content="Процессор" HorizontalAlignment="Left" Height="30" Margin="10,36,0,0" VerticalAlignment="Top" Width="131"/>
-        <Label Content="Материнская плата" HorizontalAlignment="Left" Height="30" Margin="10,66,0,0" VerticalAlignment="Top" Width="131"/>
-        
-        
-        
-        <ScrollViewer HorizontalAlignment="Right" Width="459" Margin="0,0,182,0">
-
-            <ComboBox Loaded="ProcLoad" HorizontalAlignment="Left" Height="30" VerticalAlignment="Top" Width="443" SelectionChanged="Proс_Selection"/>
+        <ScrollViewer HorizontalAlignment="Right" Width="332" Margin="0,36,388,10">
+            <StackPanel>
+                <ComboBox Loaded="ProcLoad" HorizontalAlignment="Left" Height="100" VerticalAlignment="Top" Width="315"/>
+                <ComboBox HorizontalAlignment="Left" Height="100"  VerticalAlignment="Top" Width="315"/>
+                <ComboBox HorizontalAlignment="Left" Height="100"  VerticalAlignment="Top" Width="315"/>
+                <ComboBox HorizontalAlignment="Left" Height="100"  VerticalAlignment="Top" Width="315"/>
+                <ComboBox HorizontalAlignment="Left" Height="100"  VerticalAlignment="Top" Width="315"/>
+                <ComboBox HorizontalAlignment="Left" Height="100"  VerticalAlignment="Top" Width="315"/>
+            </StackPanel>
         </ScrollViewer>
 
-       
-
-        
-        <ComboBox HorizontalAlignment="Left" Height="30" Margin="146,66,0,0" VerticalAlignment="Top" Width="459"/>
-        <Label Content="Видеокарта" HorizontalAlignment="Left" Height="30" Margin="10,96,0,0" VerticalAlignment="Top" Width="131"/>
-        <Label Content="Оперативная память" HorizontalAlignment="Left" Height="30" Margin="10,126,0,0" VerticalAlignment="Top" Width="131"/>
-        <ComboBox HorizontalAlignment="Left" Height="30" Margin="146,96,0,0" VerticalAlignment="Top" Width="459"/>
-        <ComboBox HorizontalAlignment="Left" Height="30" Margin="146,126,0,0" VerticalAlignment="Top" Width="459">
-            <ScrollViewer Height="100" Width="450"/>
-        </ComboBox>
-        <Label Content="Хранилище данных" HorizontalAlignment="Left" Height="30" Margin="10,156,0,0" VerticalAlignment="Top" Width="131"/>
-        <Label Content="Блок питания" HorizontalAlignment="Left" Height="30" Margin="10,186,0,0" VerticalAlignment="Top" Width="136"/>
-        <ComboBox HorizontalAlignment="Left" Height="30" Margin="146,156,0,0" VerticalAlignment="Top" Width="459"/>
-        <ComboBox HorizontalAlignment="Left" Height="26" Margin="146,186,0,0" VerticalAlignment="Top" Width="459">
-            <ScrollViewer Height="100" Width="449"/>
-        </ComboBox>
 
     </Grid>
 </Window>

@@ -12,6 +12,7 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
+using System.Threading;
 
 namespace WpfApp1
 {
@@ -27,9 +28,13 @@ namespace WpfApp1
         }
         private string sql;
         private bool factor = false;
+        private int allID = 0;
+        public static bool BOOLER = false;
         private void MainForm_Closing(object sender, System.ComponentModel.CancelEventArgs e)
         {
 
+            Exit ex = new Exit();
+            ex.Show();
         }
 
         private void BlueSide(object sender, RoutedEventArgs e)
@@ -40,8 +45,7 @@ namespace WpfApp1
         {
 
         }
-
-        private void ComboBox_Loaded(object sender, RoutedEventArgs e)
+        private void LoadFile(object sender, RoutedEventArgs e)
         {
 
         }
@@ -59,6 +63,11 @@ namespace WpfApp1
                 data.Add(reader[1].ToString() + " " + reader[2].ToString());
             }
             combo.ItemsSource = data;
+            
+            /* Обнуление лишней строки */
+            data.Remove("Выберете процессор");
+            combo.ItemsSource = data;
+            
             reader.Close();
         }
 
@@ -69,11 +78,21 @@ namespace WpfApp1
             string[] stringer = name.Split(' ');
             if (factor)
             {
-                sql = "SELECT * FROM `processor` WHERE " + stringer[0];
+                sql = "SELECT * FROM `processor` WHERE `Название` = " + '"' +stringer[0] + '"';
                 MySqlCommand nextCommand = new MySqlCommand(sql, SQL_Class.connection);
-                MySqlDataReader reader = nextCommand.ExecuteReader(); 
+                MySqlDataReader reader = nextCommand.ExecuteReader();
+                while(reader.Read())
+                {
+                    allID = System.Convert.ToInt32(reader[0].ToString());
+                }
             }
 
+        }
+
+        private void AboutMe(object sender, RoutedEventArgs e)
+        {
+            TY thx = new TY();
+            thx.Show();
         }
         /* TY thx = new TY();
 thx.Show(); */
