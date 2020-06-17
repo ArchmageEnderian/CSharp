@@ -41,21 +41,21 @@
 
         </Menu>
 
-        <Label Content="Процессор" HorizontalAlignment="Left" Height="77" Margin="10,36,0,0" VerticalAlignment="Top" Foreground="ForestGreen" Width="249" FontSize="24" FontFamily="Times New Roman"/>
-        <Label Content="Материнская плата" HorizontalAlignment="Left" Height="76" Margin="10,113,0,0" VerticalAlignment="Top" Foreground="ForestGreen" Width="249" FontSize="24" FontFamily="Times New Roman"/>
-        <Label Content="Видеокарта" HorizontalAlignment="Left" Height="77" Margin="10,189,0,0" VerticalAlignment="Top" Foreground="ForestGreen" Width="249" FontSize="24" FontFamily="Times New Roman"/>
-        <Label Content="Оперативная память" HorizontalAlignment="Left" Height="77" Margin="10,266,0,0" VerticalAlignment="Top" Foreground="ForestGreen" Width="249" FontSize="24" FontFamily="Times New Roman"/>
-        <Label Content="Хранилище данных" HorizontalAlignment="Left" Height="76" Margin="10,343,0,0" VerticalAlignment="Top" Foreground="ForestGreen" Width="249" FontSize="24" FontFamily="Times New Roman"/>
-        <Label Content="Блок питания" HorizontalAlignment="Left" Height="77" Margin="10,419,0,0" VerticalAlignment="Top" Foreground="ForestGreen" Width="249" FontSize="24" FontFamily="Times New Roman"/>
+        <Label x:Name="ProcLabel" Content="Процессор" HorizontalAlignment="Left" Height="77" Margin="10,36,0,0" VerticalAlignment="Top" Foreground="ForestGreen" Width="249" FontSize="24" FontFamily="Times New Roman"/>
+        <Label x:Name="MatLabel"  Content="Материнская плата" HorizontalAlignment="Left" Height="76" Margin="10,113,0,0" VerticalAlignment="Top" Foreground="ForestGreen" Width="249" FontSize="24" FontFamily="Times New Roman"/>
+        <Label x:Name="VideoLabel"  Content="Видеокарта" HorizontalAlignment="Left" Height="77" Margin="10,189,0,0" VerticalAlignment="Top" Foreground="ForestGreen" Width="249" FontSize="24" FontFamily="Times New Roman"/>
+        <Label x:Name="OperLabel"  Content="Оперативная память" HorizontalAlignment="Left" Height="77" Margin="10,266,0,0" VerticalAlignment="Top" Foreground="ForestGreen" Width="249" FontSize="24" FontFamily="Times New Roman"/>
+        <Label x:Name="HranLabel"  Content="Хранилище данных" HorizontalAlignment="Left" Height="76" Margin="10,343,0,0" VerticalAlignment="Top" Foreground="ForestGreen" Width="249" FontSize="24" FontFamily="Times New Roman"/>
+        <Label x:Name="BlockLabel"  Content="Блок питания" HorizontalAlignment="Left" Height="77" Margin="10,419,0,0" VerticalAlignment="Top" Foreground="ForestGreen" Width="249" FontSize="24" FontFamily="Times New Roman"/>
 
         <ScrollViewer HorizontalAlignment="Right" Width="332" Margin="0,36,388,10">
             <StackPanel>
-                <ComboBox Loaded="ProcLoad" HorizontalAlignment="Left" Height="100" VerticalAlignment="Top" Width="315"/>
-                <ComboBox HorizontalAlignment="Left" Height="100"  VerticalAlignment="Top" Width="315"/>
-                <ComboBox HorizontalAlignment="Left" Height="100"  VerticalAlignment="Top" Width="315"/>
-                <ComboBox HorizontalAlignment="Left" Height="100"  VerticalAlignment="Top" Width="315"/>
-                <ComboBox HorizontalAlignment="Left" Height="100"  VerticalAlignment="Top" Width="315"/>
-                <ComboBox HorizontalAlignment="Left" Height="100"  VerticalAlignment="Top" Width="315"/>
+                <ComboBox Loaded="ProcLoad" HorizontalAlignment="Left" Height="100" VerticalAlignment="Top" Width="315" SelectionChanged="Proс_Selection"/>
+                <ComboBox Loaded="MatLoad" HorizontalAlignment="Left" Height="100"  VerticalAlignment="Top" Width="315"/>
+                <ComboBox Loaded="VideoLoad" HorizontalAlignment="Left" Height="100"  VerticalAlignment="Top" Width="315"/>
+                <ComboBox Loaded="OperLoad" HorizontalAlignment="Left" Height="100"  VerticalAlignment="Top" Width="315"/>
+                <ComboBox Loaded="HranLoad" HorizontalAlignment="Left" Height="100"  VerticalAlignment="Top" Width="315"/>
+                <ComboBox Loaded="BlockLoad" HorizontalAlignment="Left" Height="100"  VerticalAlignment="Top" Width="315"/>
             </StackPanel>
         </ScrollViewer>
 

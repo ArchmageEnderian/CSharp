@@ -77,6 +77,7 @@ namespace WpfApp1
         }
         private void ProcLoad(object sender, RoutedEventArgs e)
         {
+            ProcLabel.Background = Brushes.Red;
             List<string> data = new List<string>();
             data.Add("Выберете процессор");
             var combo = sender as ComboBox;
@@ -96,23 +97,46 @@ namespace WpfApp1
             
             reader.Close();
         }
-
+        private void MatLoad(object sender, RoutedEventArgs e)
+        {
+            MatLabel.Background = Brushes.Red;
+        }
+        private void VideoLoad(object sender, RoutedEventArgs e)
+        {
+            VideoLabel.Background = Brushes.Red;
+        }
+        private void OperLoad(object sender, RoutedEventArgs e)
+        {
+            OperLabel.Background = Brushes.Red;
+        }
+        private void HranLoad(object sender, RoutedEventArgs e)
+        {
+            HranLabel.Background = Brushes.Red;
+        }
+        private void BlockLoad(object sender, RoutedEventArgs e)
+        {
+            BlockLabel.Background = Brushes.Red;
+        }
         private void Proс_Selection(object sender, SelectionChangedEventArgs e)
         {
+            string spname = "Выберете процессор";
             var selected = sender as ComboBox;
-            string name = selected.SelectedItem as string;
-            string[] stringer = name.Split(' ');
-            if (factor)
+            if (!(spname == selected.SelectedItem as string))
             {
-                sql = "SELECT * FROM `processor` WHERE `Название` = " + '"' +stringer[0] + '"';
-                MySqlCommand nextCommand = new MySqlCommand(sql, SQL_Class.connection);
-                MySqlDataReader reader = nextCommand.ExecuteReader();
-                while(reader.Read())
+                string name = selected.SelectedItem as string;
+                string[] stringer = name.Split(' ');
+                if (factor)
                 {
-                    allID = System.Convert.ToInt32(reader[0].ToString());
+                    sql = "SELECT * FROM `processor` WHERE `Название` = " + '"' + stringer[0] + '"';
+                    MySqlCommand nextCommand = new MySqlCommand(sql, SQL_Class.connection);
+                    MySqlDataReader reader = nextCommand.ExecuteReader();
+                    while (reader.Read())
+                    {
+                        allID = System.Convert.ToInt32(reader[0].ToString());
+                    }
                 }
+                ProcLabel.Background = Brushes.Transparent;
             }
-
         }
 
         private void AboutMe(object sender, RoutedEventArgs e)
