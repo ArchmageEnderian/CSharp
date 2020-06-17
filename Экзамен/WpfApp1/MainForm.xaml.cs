@@ -99,22 +99,47 @@ namespace WpfApp1
         }
         private void MatLoad(object sender, RoutedEventArgs e)
         {
+            List<string> data2 = new List<string>();
+            data2.Add("Выберете материнскую плату");
+            var combo = sender as ComboBox;
+            combo.SelectedIndex = 0;
+            combo.ItemsSource = data2;
             MatLabel.Background = Brushes.Red;
         }
         private void VideoLoad(object sender, RoutedEventArgs e)
         {
+            List<string> data3 = new List<string>();
+            data3.Add("Выберете видеокарту");
+            var combo = sender as ComboBox;
+            combo.SelectedIndex = 0;
+            combo.ItemsSource = data3;
             VideoLabel.Background = Brushes.Red;
         }
         private void OperLoad(object sender, RoutedEventArgs e)
         {
+            List<string> data4 = new List<string>();
+            data4.Add("Выберете оперативную память");
+            var combo = sender as ComboBox;
+            combo.SelectedIndex = 0;
+            combo.ItemsSource = data4;
             OperLabel.Background = Brushes.Red;
         }
         private void HranLoad(object sender, RoutedEventArgs e)
         {
+            List<string> data5 = new List<string>();
+            data5.Add("Выберете хранилище данных");
+            var combo = sender as ComboBox;
+            combo.SelectedIndex = 0;
+            combo.ItemsSource = data5;
             HranLabel.Background = Brushes.Red;
         }
         private void BlockLoad(object sender, RoutedEventArgs e)
         {
+            List<string> data6 = new List<string>();
+            data6.Add("Выберете блок питания");
+            var combo = sender as ComboBox;
+            combo.SelectedIndex = 0;
+            combo.ItemsSource = data6;
             BlockLabel.Background = Brushes.Red;
         }
         private void Proс_Selection(object sender, SelectionChangedEventArgs e)
@@ -138,7 +163,7 @@ namespace WpfApp1
                 ProcLabel.Background = Brushes.Transparent;
             }
         }
-
+        /* Дописать */
         private void AboutMe(object sender, RoutedEventArgs e)
         {
             TY thx = new TY();

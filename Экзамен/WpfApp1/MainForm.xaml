@@ -6,7 +6,7 @@
         xmlns:local="clr-namespace:WpfApp1"
         mc:Ignorable="d"
         Title="MainForm" Height="569.388" Width="1072.066" Closing="MainForm_Closing" KeyDown="MainForm_KeyDown">
-   
+
     <Window.Background>
         <ImageBrush ImageSource="Fon2.png"></ImageBrush>
     </Window.Background>
@@ -41,12 +41,12 @@
 
         </Menu>
 
-        <Label x:Name="ProcLabel" Content="Процессор" HorizontalAlignment="Left" Height="77" Margin="10,36,0,0" VerticalAlignment="Top" Foreground="ForestGreen" Width="249" FontSize="24" FontFamily="Times New Roman"/>
-        <Label x:Name="MatLabel"  Content="Материнская плата" HorizontalAlignment="Left" Height="76" Margin="10,113,0,0" VerticalAlignment="Top" Foreground="ForestGreen" Width="249" FontSize="24" FontFamily="Times New Roman"/>
-        <Label x:Name="VideoLabel"  Content="Видеокарта" HorizontalAlignment="Left" Height="77" Margin="10,189,0,0" VerticalAlignment="Top" Foreground="ForestGreen" Width="249" FontSize="24" FontFamily="Times New Roman"/>
-        <Label x:Name="OperLabel"  Content="Оперативная память" HorizontalAlignment="Left" Height="77" Margin="10,266,0,0" VerticalAlignment="Top" Foreground="ForestGreen" Width="249" FontSize="24" FontFamily="Times New Roman"/>
-        <Label x:Name="HranLabel"  Content="Хранилище данных" HorizontalAlignment="Left" Height="76" Margin="10,343,0,0" VerticalAlignment="Top" Foreground="ForestGreen" Width="249" FontSize="24" FontFamily="Times New Roman"/>
-        <Label x:Name="BlockLabel"  Content="Блок питания" HorizontalAlignment="Left" Height="77" Margin="10,419,0,0" VerticalAlignment="Top" Foreground="ForestGreen" Width="249" FontSize="24" FontFamily="Times New Roman"/>
+        <Label x:Name="ProcLabel" Content="Процессор" HorizontalAlignment="Left" Height="40" Margin="10,36,0,0" VerticalAlignment="Top" Foreground="ForestGreen" Width="122" FontSize="24" FontFamily="Times New Roman"/>
+        <Label x:Name="MatLabel"  Content="Материнская плата" HorizontalAlignment="Left" Height="40" Margin="10,113,0,0" VerticalAlignment="Top" Foreground="ForestGreen" Width="209" FontSize="24" FontFamily="Times New Roman"/>
+        <Label x:Name="VideoLabel"  Content="Видеокарта" HorizontalAlignment="Left" Height="40" Margin="10,189,0,0" VerticalAlignment="Top" Foreground="ForestGreen" Width="133" FontSize="24" FontFamily="Times New Roman"/>
+        <Label x:Name="OperLabel"  Content="Оперативная память" HorizontalAlignment="Left" Height="40" Margin="10,266,0,0" VerticalAlignment="Top" Foreground="ForestGreen" Width="219" FontSize="24" FontFamily="Times New Roman"/>
+        <Label x:Name="HranLabel"  Content="Хранилище данных" HorizontalAlignment="Left" Height="40" Margin="10,343,0,0" VerticalAlignment="Top" Foreground="ForestGreen" Width="219" FontSize="24" FontFamily="Times New Roman"/>
+        <Label x:Name="BlockLabel"  Content="Блок питания" HorizontalAlignment="Left" Height="40" Margin="10,419,0,0" VerticalAlignment="Top" Foreground="ForestGreen" Width="149" FontSize="24" FontFamily="Times New Roman"/>
 
         <ScrollViewer HorizontalAlignment="Right" Width="332" Margin="0,36,388,10">
             <StackPanel>
