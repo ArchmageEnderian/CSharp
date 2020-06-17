@@ -15,19 +15,25 @@
 
         </Menu>
 
-        <ComboBox Loaded="ProcLoad" HorizontalAlignment="Left" Height="30" Margin="146,36,0,0" VerticalAlignment="Top" Width="459">
-            <ScrollViewer Height="100" Width="450"/>
-        </ComboBox>
+
+
         <Label Content="Процессор" HorizontalAlignment="Left" Height="30" Margin="10,36,0,0" VerticalAlignment="Top" Width="131"/>
         <Label Content="Материнская плата" HorizontalAlignment="Left" Height="30" Margin="10,66,0,0" VerticalAlignment="Top" Width="131"/>
-        <ComboBox HorizontalAlignment="Left" Height="30" Margin="146,66,0,0" VerticalAlignment="Top" Width="459">
-            <ScrollViewer Height="100" Width="450"/>
-        </ComboBox>
+        
+        
+        
+        <ScrollViewer HorizontalAlignment="Right" Width="459" Margin="0,0,182,0">
+
+            <ComboBox Loaded="ProcLoad" HorizontalAlignment="Left" Height="30" VerticalAlignment="Top" Width="443" SelectionChanged="Proс_Selection"/>
+        </ScrollViewer>
+
+       
+
+        
+        <ComboBox HorizontalAlignment="Left" Height="30" Margin="146,66,0,0" VerticalAlignment="Top" Width="459"/>
         <Label Content="Видеокарта" HorizontalAlignment="Left" Height="30" Margin="10,96,0,0" VerticalAlignment="Top" Width="131"/>
         <Label Content="Оперативная память" HorizontalAlignment="Left" Height="30" Margin="10,126,0,0" VerticalAlignment="Top" Width="131"/>
-        <ComboBox HorizontalAlignment="Left" Height="30" Margin="146,96,0,0" VerticalAlignment="Top" Width="459">
-            <ScrollViewer Height="100" Width="450"/>
-        </ComboBox>
+        <ComboBox HorizontalAlignment="Left" Height="30" Margin="146,96,0,0" VerticalAlignment="Top" Width="459"/>
         <ComboBox HorizontalAlignment="Left" Height="30" Margin="146,126,0,0" VerticalAlignment="Top" Width="459">
             <ScrollViewer Height="100" Width="450"/>
         </ComboBox>
@@ -37,5 +43,6 @@
         <ComboBox HorizontalAlignment="Left" Height="26" Margin="146,186,0,0" VerticalAlignment="Top" Width="459">
             <ScrollViewer Height="100" Width="449"/>
         </ComboBox>
+
     </Grid>
 </Window>
