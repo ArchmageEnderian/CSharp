@@ -10,8 +10,15 @@
         <ImageBrush ImageSource="Fon2.png"></ImageBrush>
     </Window.Background>
     <Grid>
-        <CheckBox x:Name="BlueBox" Content="Проверять совместимость" HorizontalAlignment="Left" Height="19" Margin="681,42,0,0" VerticalAlignment="Top" Width="172" Checked="BlueSide"/>
-        <Menu HorizontalAlignment="Left" Height="31" VerticalAlignment="Top" Width="1064">
+        <StackPanel>
+            <CheckBox x:Name="BlueBox" Content="Проверять совместимость" MouseEnter="Button_MouseEnter_1" ToolTip="Для проверки на совместимость жми сюда" HorizontalAlignment="Left" Height="19" Margin="681,42,0,0" VerticalAlignment="Top" Width="172" Checked="BlueSide"/>
+            <Popup x:Name="popup1" StaysOpen="False" Placement="Mouse" MaxWidth="180" AllowsTransparency="True">
+                <TextBlock TextWrapping="Wrap" Width="180" Background="LightPink" Opacity="0.8">
+                    Спасибо metanit.com, ты спасаешь мой день!
+                </TextBlock>
+            </Popup>
+        </StackPanel>
+                <Menu HorizontalAlignment="Left" Height="31" VerticalAlignment="Top" Width="1064">
             <MenuItem Header="Конфигурация" Height="31" Width="100">
                 <Button x:Name="SaveBut" Content="Сохранить сборку" Click="SaveFile"/>
                 <Button x:Name="LoadBut" Content="Загрузить сборку" Click="LoadFile"/>

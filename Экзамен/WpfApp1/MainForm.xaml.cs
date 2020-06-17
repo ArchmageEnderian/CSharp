@@ -49,6 +49,10 @@ namespace WpfApp1
         {
 
         }
+        private void Button_MouseEnter_1(object sender, MouseEventArgs e)
+        {
+            popup1.IsOpen = true;
+        }
         private void ProcLoad(object sender, RoutedEventArgs e)
         {
             List<string> data = new List<string>();
