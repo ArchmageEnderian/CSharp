@@ -23,13 +23,11 @@ namespace WpfApp1
     {
         public MainForm()
         {
-            InitializeComponent();
-            SQL_Class.SQL_OpenServer();
-            
+            InitializeComponent();     
         }
         private void MainForm_Load(object sender, EventArgs e)
         {
-            
+            /* НЕНУЖНАЯ ЧАСТЬ */
         }
         private void MainForm_KeyDown(object sender, KeyEventArgs e)
         {
@@ -46,6 +44,12 @@ namespace WpfApp1
         private bool factor = false;
         private int allID = 0;
         public static bool BOOLER = false;
+        private List<string> data1; 
+        private List<string> data2;
+        private List<string> data3;
+        private List<string> data4;
+        private List<string> data5;
+        private List<string> data6;
         private void MainForm_Closing(object sender, System.ComponentModel.CancelEventArgs e)
         {
             Exit ex = new Exit();
@@ -53,7 +57,7 @@ namespace WpfApp1
         }
         private void BlueSide(object sender, RoutedEventArgs e)
         {
-          factor = true;
+            factor = true;
         }
         private void SaveFile(object sender, RoutedEventArgs e)
         {
@@ -77,9 +81,10 @@ namespace WpfApp1
         }
         private void ProcLoad(object sender, RoutedEventArgs e)
         {
+            SQL_Class.SQL_OpenServer();
+            data1 = new List<string>();
             ProcLabel.Background = Brushes.Red;
-            List<string> data = new List<string>();
-            data.Add("Выберете процессор");
+            data1.Add("Выберете процессор");
             var combo = sender as ComboBox;
             sql = "SELECT * FROM `processor`";
             MySqlCommand command = new MySqlCommand(sql, SQL_Class.connection);
@@ -87,71 +92,132 @@ namespace WpfApp1
             combo.SelectedIndex = 0;
             while (reader.Read())
             {
-                data.Add(reader[1].ToString() + " " + reader[2].ToString());
+                data1.Add(reader[1].ToString() + " " + reader[2].ToString());
             }
-            combo.ItemsSource = data;
+            combo.ItemsSource = data1;
             
             /* Обнуление лишней строки */
-            data.Remove("Выберете процессор");
-            combo.ItemsSource = data;
-            
+            data1.Remove("Выберете процессор");
+            combo.ItemsSource = data1;  
             reader.Close();
+            SQL_Class.SQL_CloseServer();
         }
         private void MatLoad(object sender, RoutedEventArgs e)
         {
-            List<string> data2 = new List<string>();
+            SQL_Class.SQL_OpenServer();
+            data2 = new List<string>();
             data2.Add("Выберете материнскую плату");
             var combo = sender as ComboBox;
+            sql = "SELECT * FROM `motherboard`";
+            MySqlCommand command = new MySqlCommand(sql, SQL_Class.connection);
+            MySqlDataReader reader = command.ExecuteReader();
+            while (reader.Read())
+            {
+                data2.Add(reader[1].ToString() + " " + reader[2].ToString());
+            }
+            reader.Close();
+            SQL_Class.SQL_CloseServer();
             combo.SelectedIndex = 0;
             combo.ItemsSource = data2;
             MatLabel.Background = Brushes.Red;
-        }
+        }       
         private void VideoLoad(object sender, RoutedEventArgs e)
         {
-            List<string> data3 = new List<string>();
+            SQL_Class.SQL_OpenServer();
+            data3 = new List<string>();
             data3.Add("Выберете видеокарту");
             var combo = sender as ComboBox;
+            sql = "SELECT * FROM `videocard`";
+            MySqlCommand command = new MySqlCommand(sql, SQL_Class.connection);
+            MySqlDataReader reader = command.ExecuteReader();
+            while (reader.Read())
+            {
+                data3.Add(reader[1].ToString() + " " + reader[2].ToString());
+            }
+            reader.Close();
+            SQL_Class.SQL_CloseServer();
             combo.SelectedIndex = 0;
             combo.ItemsSource = data3;
             VideoLabel.Background = Brushes.Red;
         }
         private void OperLoad(object sender, RoutedEventArgs e)
         {
-            List<string> data4 = new List<string>();
+            SQL_Class.SQL_OpenServer();
+            data4 = new List<string>();
             data4.Add("Выберете оперативную память");
             var combo = sender as ComboBox;
+            sql = "SELECT * FROM `operativa`";
+            MySqlCommand command = new MySqlCommand(sql, SQL_Class.connection);
+            MySqlDataReader reader = command.ExecuteReader();
+            while (reader.Read())
+            {
+                data4.Add(reader[1].ToString() + " " + reader[2].ToString());
+            }
+            reader.Close();
+            SQL_Class.SQL_CloseServer();
             combo.SelectedIndex = 0;
             combo.ItemsSource = data4;
             OperLabel.Background = Brushes.Red;
         }
         private void HranLoad(object sender, RoutedEventArgs e)
         {
-            List<string> data5 = new List<string>();
+            SQL_Class.SQL_OpenServer();
+            data5 = new List<string>();
             data5.Add("Выберете хранилище данных");
             var combo = sender as ComboBox;
+            sql = "SELECT * FROM `hdd`";
+            MySqlCommand command = new MySqlCommand(sql, SQL_Class.connection);
+            MySqlDataReader reader = command.ExecuteReader();
+            while (reader.Read())
+            {
+                data5.Add(reader[1].ToString() + " " + reader[2].ToString());
+            }
+            reader.Close();
+            SQL_Class.SQL_CloseServer();
             combo.SelectedIndex = 0;
             combo.ItemsSource = data5;
             HranLabel.Background = Brushes.Red;
         }
         private void BlockLoad(object sender, RoutedEventArgs e)
         {
-            List<string> data6 = new List<string>();
+            SQL_Class.SQL_OpenServer();
+            data6 = new List<string>();
             data6.Add("Выберете блок питания");
             var combo = sender as ComboBox;
+            sql = "SELECT * FROM `power`";
+            MySqlCommand command = new MySqlCommand(sql, SQL_Class.connection);
+            MySqlDataReader reader = command.ExecuteReader();
+            while (reader.Read())
+            {
+                data6.Add(reader[1].ToString() + " " + reader[2].ToString());
+            }
+            reader.Close();
+            SQL_Class.SQL_CloseServer();
             combo.SelectedIndex = 0;
             combo.ItemsSource = data6;
             BlockLabel.Background = Brushes.Red;
+        }
+        private void SovmestReloader()
+        {
+            if(factor)
+            {
+                List<string> data6 = new List<string>();
+                Sad.ItemsSource = data6;
+
+            }
+
         }
         private void Proс_Selection(object sender, SelectionChangedEventArgs e)
         {
             string spname = "Выберете процессор";
             var selected = sender as ComboBox;
-            if (!(spname == selected.SelectedItem as string))
+            if(!(spname == selected.SelectedItem as string))
             {
                 string name = selected.SelectedItem as string;
                 string[] stringer = name.Split(' ');
                 if (factor)
                 {
+                    SQL_Class.SQL_OpenServer();
                     sql = "SELECT * FROM `processor` WHERE `Название` = " + '"' + stringer[0] + '"';
                     MySqlCommand nextCommand = new MySqlCommand(sql, SQL_Class.connection);
                     MySqlDataReader reader = nextCommand.ExecuteReader();
@@ -159,23 +225,71 @@ namespace WpfApp1
                     {
                         allID = System.Convert.ToInt32(reader[0].ToString());
                     }
+                    reader.Close();
+                    SQL_Class.SQL_CloseServer();
                 }
                 ProcLabel.Background = Brushes.Transparent;
             }
+            SovmestReloader();
         }
-        /* Дописать */
+        private void Mat_Selection(object sender, SelectionChangedEventArgs e)
+        {
+            /*
+            List<string> dat11 = new List<string>();
+            string spname = "Выберете материнскую плату";
+            var selected = sender as ComboBox;
+            if(!(spname == selected.SelectedItem as string))
+            {
+                if(factor)
+                {
+                    SQL_Class.SQL_OpenServer();
+                    sql = "SELECT * FROM `motherboard` WHERE `id` = " + allID.ToString();
+                    MySqlCommand nextCommand = new MySqlCommand(sql, SQL_Class.connection);
+                    MySqlDataReader reader = nextCommand.ExecuteReader();
+                    while (reader.Read())
+                    {
+                       dat11.Add(reader[1].ToString() + " " + reader[2].ToString());
+                    }
+                    reader.Close();
+                    SQL_Class.SQL_CloseServer();
+                    selected.SelectedIndex = 0;
+                    selected.ItemsSource = dat11;
+                }
+            }
+            */
+
+        }
+
+        private void Video_Selection(object sender, SelectionChangedEventArgs e)
+        {
+
+        }
+
+        private void Oper_Selection(object sender, SelectionChangedEventArgs e)
+        {
+
+        }
+
+        private void Hran_Selection(object sender, SelectionChangedEventArgs e)
+        {
+
+        }
+        private void Block_Selection(object sender, SelectionChangedEventArgs e)
+        {
+
+        }
         private void AboutMe(object sender, RoutedEventArgs e)
         {
             TY thx = new TY();
             thx.Show();
         }
-        interface IFire
+        interface IFire 
         {
             void Fst();
             void Scnd();
             void Thrt();
         }
-        class FireWorks : IFire
+        class FireWorks : IFire 
         {
             public void Fst()
             {
@@ -190,15 +304,13 @@ namespace WpfApp1
                 MessageBox.Show("Ба-бах", "Пиу");
             }
         }
-
-        class ImpFireWorks : FireWorks
+        class ImpFireWorks : FireWorks 
         {
             public void NeverMore()
             {
                 MessageBox.Show("Ба-бах-бах-бааах", "Пиу");
             }
         }
-
         private void Button_Click(object sender, RoutedEventArgs e)
         {
             IFire canonfire = new FireWorks();

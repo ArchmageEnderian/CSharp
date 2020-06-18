@@ -52,11 +52,11 @@
         <ScrollViewer HorizontalAlignment="Right" Width="332" Margin="0,36,388,10">
             <StackPanel>
                 <ComboBox Loaded="ProcLoad" HorizontalAlignment="Left" Height="100" VerticalAlignment="Top" Width="315" SelectionChanged="Proс_Selection"/>
-                <ComboBox Loaded="MatLoad" HorizontalAlignment="Left" Height="100"  VerticalAlignment="Top" Width="315"/>
-                <ComboBox Loaded="VideoLoad" HorizontalAlignment="Left" Height="100"  VerticalAlignment="Top" Width="315"/>
-                <ComboBox Loaded="OperLoad" HorizontalAlignment="Left" Height="100"  VerticalAlignment="Top" Width="315"/>
-                <ComboBox Loaded="HranLoad" HorizontalAlignment="Left" Height="100"  VerticalAlignment="Top" Width="315"/>
-                <ComboBox Loaded="BlockLoad" HorizontalAlignment="Left" Height="100"  VerticalAlignment="Top" Width="315"/>
+                <ComboBox x:Name="Sad" Loaded="MatLoad" HorizontalAlignment="Left" Height="100"  VerticalAlignment="Top" Width="315" SelectionChanged="Mat_Selection" />
+                <ComboBox Loaded="VideoLoad" HorizontalAlignment="Left" Height="100"  VerticalAlignment="Top" Width="315" SelectionChanged="Video_Selection"/>
+                <ComboBox Loaded="OperLoad" HorizontalAlignment="Left" Height="100"  VerticalAlignment="Top" Width="315" SelectionChanged="Oper_Selection"/>
+                <ComboBox Loaded="HranLoad" HorizontalAlignment="Left" Height="100"  VerticalAlignment="Top" Width="315" SelectionChanged="Hran_Selection"/>
+                <ComboBox Loaded="BlockLoad" HorizontalAlignment="Left" Height="100"  VerticalAlignment="Top" Width="315" SelectionChanged="Block_Selection"/>
             </StackPanel>
         </ScrollViewer>
 
