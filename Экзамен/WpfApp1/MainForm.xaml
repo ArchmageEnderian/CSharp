@@ -27,12 +27,11 @@
             <Button Content="Фейерверк" HorizontalAlignment="Left" Height="55" Margin="968,0,0,0" Width="67" Click="Button_Click"/>
         </StackPanel>
         <Menu HorizontalAlignment="Left" Height="31" VerticalAlignment="Top" Width="1064">
-            <MenuItem Header="Конфигурация" Height="31" Width="100" Click="SaveFile" InputGestureText="ctrl+o">
+            <MenuItem Header="Конфигурация" Height="31" Width="100" Click="SaveFile">
                 <MenuItem.InputBindings>
                     <KeyBinding Key="S" Modifiers="control"/>
                 </MenuItem.InputBindings>
-                <Button x:Name="SaveBut" Content="Сохранить сборку" Click="SaveFile"/>
-                <Button x:Name="LoadBut" Content="Загрузить сборку" Click="LoadFile"/>
+                <Button x:Name="SaveBut" Content="Сохранить сборку (S)" Click="SaveFile"/>
                 <!--<Закончить тут>-->
             </MenuItem>
 
@@ -42,21 +41,21 @@
 
         </Menu>
 
-        <Label x:Name="ProcLabel" Content="Процессор" HorizontalAlignment="Left" Height="40" Margin="10,36,0,0" VerticalAlignment="Top" Foreground="ForestGreen" Width="122" FontSize="24" FontFamily="Times New Roman"/>
-        <Label x:Name="MatLabel"  Content="Материнская плата" HorizontalAlignment="Left" Height="40" Margin="10,113,0,0" VerticalAlignment="Top" Foreground="ForestGreen" Width="209" FontSize="24" FontFamily="Times New Roman"/>
-        <Label x:Name="VideoLabel"  Content="Видеокарта" HorizontalAlignment="Left" Height="40" Margin="10,189,0,0" VerticalAlignment="Top" Foreground="ForestGreen" Width="133" FontSize="24" FontFamily="Times New Roman"/>
+        <Label x:Name="ProcLabel"  Content="Процессор" HorizontalAlignment="Left" Height="40" Margin="10,36,0,0" VerticalAlignment="Top" Foreground="ForestGreen" Width="122" FontSize="24" FontFamily="Times New Roman"/>
+        <Label x:Name="MatLabel"   Content="Материнская плата" HorizontalAlignment="Left" Height="40" Margin="10,113,0,0" VerticalAlignment="Top" Foreground="ForestGreen" Width="209" FontSize="24" FontFamily="Times New Roman"/>
+        <Label x:Name="VideoLabel" Content="Видеокарта" HorizontalAlignment="Left" Height="40" Margin="10,189,0,0" VerticalAlignment="Top" Foreground="ForestGreen" Width="133" FontSize="24" FontFamily="Times New Roman"/>
         <Label x:Name="OperLabel"  Content="Оперативная память" HorizontalAlignment="Left" Height="40" Margin="10,266,0,0" VerticalAlignment="Top" Foreground="ForestGreen" Width="219" FontSize="24" FontFamily="Times New Roman"/>
         <Label x:Name="HranLabel"  Content="Хранилище данных" HorizontalAlignment="Left" Height="40" Margin="10,343,0,0" VerticalAlignment="Top" Foreground="ForestGreen" Width="219" FontSize="24" FontFamily="Times New Roman"/>
-        <Label x:Name="BlockLabel"  Content="Блок питания" HorizontalAlignment="Left" Height="40" Margin="10,419,0,0" VerticalAlignment="Top" Foreground="ForestGreen" Width="149" FontSize="24" FontFamily="Times New Roman"/>
+        <Label x:Name="BlockLabel" Content="Блок питания" HorizontalAlignment="Left" Height="40" Margin="10,419,0,0" VerticalAlignment="Top" Foreground="ForestGreen" Width="149" FontSize="24" FontFamily="Times New Roman"/>
 
         <ScrollViewer HorizontalAlignment="Right" Width="332" Margin="0,36,388,10">
             <StackPanel>
-                <ComboBox Loaded="ProcLoad" HorizontalAlignment="Left" Height="100" VerticalAlignment="Top" Width="315" SelectionChanged="Proс_Selection"/>
-                <ComboBox x:Name="Sad" Loaded="MatLoad" HorizontalAlignment="Left" Height="100"  VerticalAlignment="Top" Width="315" SelectionChanged="Mat_Selection" />
-                <ComboBox Loaded="VideoLoad" HorizontalAlignment="Left" Height="100"  VerticalAlignment="Top" Width="315" SelectionChanged="Video_Selection"/>
-                <ComboBox Loaded="OperLoad" HorizontalAlignment="Left" Height="100"  VerticalAlignment="Top" Width="315" SelectionChanged="Oper_Selection"/>
-                <ComboBox Loaded="HranLoad" HorizontalAlignment="Left" Height="100"  VerticalAlignment="Top" Width="315" SelectionChanged="Hran_Selection"/>
-                <ComboBox Loaded="BlockLoad" HorizontalAlignment="Left" Height="100"  VerticalAlignment="Top" Width="315" SelectionChanged="Block_Selection"/>
+                <ComboBox x:Name="combo1" Loaded="ProcLoad" HorizontalAlignment="Left" Height="100" VerticalAlignment="Top" Width="315" SelectionChanged="Proс_Selection"/>
+                <ComboBox x:Name="combo2" Loaded="MatLoad" HorizontalAlignment="Left" Height="100"  VerticalAlignment="Top" Width="315" SelectionChanged="Mat_Selection"/>
+                <ComboBox x:Name="combo3" Loaded="VideoLoad" HorizontalAlignment="Left" Height="100"  VerticalAlignment="Top" Width="315" SelectionChanged="Video_Selection"/>
+                <ComboBox x:Name="combo4" Loaded="OperLoad" HorizontalAlignment="Left" Height="100"  VerticalAlignment="Top" Width="315" SelectionChanged="Oper_Selection"/>
+                <ComboBox x:Name="combo5" Loaded="HranLoad" HorizontalAlignment="Left" Height="100"  VerticalAlignment="Top" Width="315" SelectionChanged="Hran_Selection"/>
+                <ComboBox x:Name="combo6" Loaded="BlockLoad" HorizontalAlignment="Left" Height="100"  VerticalAlignment="Top" Width="315" SelectionChanged="Block_Selection"/>
             </StackPanel>
         </ScrollViewer>
 

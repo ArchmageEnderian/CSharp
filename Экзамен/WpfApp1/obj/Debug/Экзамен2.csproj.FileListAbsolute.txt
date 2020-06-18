@@ -36,3 +36,5 @@ D:\GitKraken\CSharp\Экзамен\WpfApp1\obj\Debug\TY.baml
 D:\GitKraken\CSharp\Экзамен\WpfApp1\obj\Debug\TY.g.cs
 D:\GitKraken\CSharp\Экзамен\WpfApp1\obj\Debug\Exit.g.cs
 D:\GitKraken\CSharp\Экзамен\WpfApp1\obj\Debug\Exit.baml
+D:\GitKraken\CSharp\Экзамен\WpfApp1\obj\Debug\OpenSaveLoad.g.cs
+D:\GitKraken\CSharp\Экзамен\WpfApp1\obj\Debug\OpenSaveLoad.baml
