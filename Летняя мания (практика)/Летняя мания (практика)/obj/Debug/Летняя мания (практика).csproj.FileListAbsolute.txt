@@ -1,0 +1,10 @@
+D:\GitKraken\CSharp\Летняя мания (практика)\Летняя мания (практика)\obj\Debug\Летняя мания (практика).csprojAssemblyReference.cache
+D:\GitKraken\CSharp\Летняя мания (практика)\Летняя мания (практика)\obj\Debug\Летняя_мания__практика_.Form1.resources
+D:\GitKraken\CSharp\Летняя мания (практика)\Летняя мания (практика)\obj\Debug\Летняя_мания__практика_.Properties.Resources.resources
+D:\GitKraken\CSharp\Летняя мания (практика)\Летняя мания (практика)\obj\Debug\Летняя мания (практика).csproj.GenerateResource.cache
+D:\GitKraken\CSharp\Летняя мания (практика)\Летняя мания (практика)\obj\Debug\Летняя мания (практика).csproj.CoreCompileInputs.cache
+D:\GitKraken\CSharp\Летняя мания (практика)\Летняя мания (практика)\bin\Debug\Летняя мания (практика).exe.config
+D:\GitKraken\CSharp\Летняя мания (практика)\Летняя мания (практика)\bin\Debug\Летняя мания (практика).exe
+D:\GitKraken\CSharp\Летняя мания (практика)\Летняя мания (практика)\bin\Debug\Летняя мания (практика).pdb
+D:\GitKraken\CSharp\Летняя мания (практика)\Летняя мания (практика)\obj\Debug\Летняя мания (практика).exe
+D:\GitKraken\CSharp\Летняя мания (практика)\Летняя мания (практика)\obj\Debug\Летняя мания (практика).pdb
