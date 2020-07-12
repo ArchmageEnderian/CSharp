@@ -28,13 +28,15 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.AtextBox = new System.Windows.Forms.TextBox();
             this.BtextBox = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.UravnLabel = new System.Windows.Forms.Label();
-            this.maskedTextBox3 = new System.Windows.Forms.MaskedTextBox();
+            this.StartButton = new System.Windows.Forms.Button();
+            this.timer = new System.Windows.Forms.Timer(this.components);
             this.SuspendLayout();
             // 
             // AtextBox
@@ -72,7 +74,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(241, 9);
+            this.label3.Location = new System.Drawing.Point(201, 9);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(148, 13);
             this.label3.TabIndex = 4;
@@ -81,27 +83,28 @@
             // UravnLabel
             // 
             this.UravnLabel.AutoSize = true;
-            this.UravnLabel.Location = new System.Drawing.Point(395, 9);
+            this.UravnLabel.Location = new System.Drawing.Point(355, 9);
             this.UravnLabel.Name = "UravnLabel";
-            this.UravnLabel.Size = new System.Drawing.Size(25, 13);
+            this.UravnLabel.Size = new System.Drawing.Size(13, 13);
             this.UravnLabel.TabIndex = 5;
-            this.UravnLabel.Text = "???";
+            this.UravnLabel.Text = "?";
             // 
-            // maskedTextBox3
+            // StartButton
             // 
-            this.maskedTextBox3.Location = new System.Drawing.Point(244, 48);
-            this.maskedTextBox3.Mask = "099";
-            this.maskedTextBox3.Name = "maskedTextBox3";
-            this.maskedTextBox3.Size = new System.Drawing.Size(162, 20);
-            this.maskedTextBox3.TabIndex = 8;
-            this.maskedTextBox3.ValidatingType = typeof(int);
+            this.StartButton.Location = new System.Drawing.Point(204, 25);
+            this.StartButton.Name = "StartButton";
+            this.StartButton.Size = new System.Drawing.Size(176, 59);
+            this.StartButton.TabIndex = 6;
+            this.StartButton.Text = "Начать расчеты";
+            this.StartButton.UseVisualStyleBackColor = true;
+            this.StartButton.Click += new System.EventHandler(this.StartButton_Click);
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.maskedTextBox3);
+            this.ClientSize = new System.Drawing.Size(397, 95);
+            this.Controls.Add(this.StartButton);
             this.Controls.Add(this.UravnLabel);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
@@ -109,7 +112,7 @@
             this.Controls.Add(this.BtextBox);
             this.Controls.Add(this.AtextBox);
             this.Name = "Form1";
-            this.Text = "Form1";
+            this.Text = "Летняя практика";
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -123,7 +126,8 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label UravnLabel;
-        private System.Windows.Forms.MaskedTextBox maskedTextBox3;
+        private System.Windows.Forms.Button StartButton;
+        private System.Windows.Forms.Timer timer;
     }
 }
 
