@@ -1,0 +1,13 @@
+D:\GitKraken\CSharp\2 Инда, Жуков\bin\Debug\netcoreapp3.1\2 Инда, Жуков.exe
+D:\GitKraken\CSharp\2 Инда, Жуков\bin\Debug\netcoreapp3.1\2 Инда, Жуков.deps.json
+D:\GitKraken\CSharp\2 Инда, Жуков\bin\Debug\netcoreapp3.1\2 Инда, Жуков.runtimeconfig.json
+D:\GitKraken\CSharp\2 Инда, Жуков\bin\Debug\netcoreapp3.1\2 Инда, Жуков.runtimeconfig.dev.json
+D:\GitKraken\CSharp\2 Инда, Жуков\bin\Debug\netcoreapp3.1\2 Инда, Жуков.dll
+D:\GitKraken\CSharp\2 Инда, Жуков\bin\Debug\netcoreapp3.1\2 Инда, Жуков.pdb
+D:\GitKraken\CSharp\2 Инда, Жуков\obj\Debug\netcoreapp3.1\2 Инда, Жуков.csprojAssemblyReference.cache
+D:\GitKraken\CSharp\2 Инда, Жуков\obj\Debug\netcoreapp3.1\2 Инда, Жуков.AssemblyInfoInputs.cache
+D:\GitKraken\CSharp\2 Инда, Жуков\obj\Debug\netcoreapp3.1\2 Инда, Жуков.AssemblyInfo.cs
+D:\GitKraken\CSharp\2 Инда, Жуков\obj\Debug\netcoreapp3.1\2 Инда, Жуков.csproj.CoreCompileInputs.cache
+D:\GitKraken\CSharp\2 Инда, Жуков\obj\Debug\netcoreapp3.1\2 Инда, Жуков.dll
+D:\GitKraken\CSharp\2 Инда, Жуков\obj\Debug\netcoreapp3.1\2 Инда, Жуков.pdb
+D:\GitKraken\CSharp\2 Инда, Жуков\obj\Debug\netcoreapp3.1\2 Инда, Жуков.genruntimeconfig.cache
