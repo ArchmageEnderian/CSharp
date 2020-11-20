@@ -10,13 +10,14 @@ namespace _2_Инда__Жуков
         static List<int> list_on = new List<int>();
         static List<int> rez = new List<int>();
 
-        static List<int> Dijkstra(int[,] matr, int vert1)
+        static List<int> Dijkstra(int[,] matrix, int vert1)
         {
             List<int> dist = new List<int>(n);
             for (int i = 0; i < n; i++)
             {
                 dist.Add(99999999);
             }
+            dist[vert1] = 0;
             bool[] spec = new bool[n];
             for (int i = 0; i < n; i++) spec[i] = false;
             int minch = 99999999;
@@ -33,9 +34,9 @@ namespace _2_Инда__Жуков
             {
                 for (int i = 0; i < n; i++)
                 {
-                    if(matr[minind, i] > 0)
+                    if(matrix[minind, i] > 0)
                     {
-                        int temp = minch + matr[minind, i];
+                        int temp = minch + matrix[minind, i];
                         if (temp < dist[i])
                             dist[i] = temp;
                     }
@@ -58,9 +59,9 @@ namespace _2_Инда__Жуков
                 {
                     for (int i = 0; i < n; i++)
                     {
-                        if (matr[minind, i] > 0)
+                        if (matrix[minind, i] > 0)
                         {
-                            int temp = minch + matr[minind, i];
+                            int temp = minch + matrix[minind, i];
                             if (temp < dist[i])
                                 dist[i] = temp;
                         }
@@ -87,13 +88,13 @@ namespace _2_Инда__Жуков
             return d;
         }
 
-        static void Prov(List<int> listing, int[,] matr1, string[] range, bool[] on_off)
+        static void Prov(List<int> listing, int[,] matrix, string[] range, bool[] on_off)
         {
             while(listing.Count != 0)
             {
                 int vert = listing[0];
                 on_off[vert] = true;
-                List<int> paths = Dijkstra(matr1, vert);
+                List<int> paths = Dijkstra(matrix, vert);
                 for (int i = 0; i < n; i++)
                 {
                     int qq = Convert.ToInt32(range[vert]);
@@ -107,7 +108,7 @@ namespace _2_Инда__Жуков
         }
         static void Main(string[] args)
         {
-            string path = @"D:\GitKraken\CSharp\2 Инда, Жуков\alarm.txt", s;
+            string path = @"D:\GitKraken\CSharp\2 Инда, Жуков\alarm1.txt", s;
 
             StreamReader sr = File.OpenText(path);
             n = Convert.ToInt32(sr.ReadLine());
