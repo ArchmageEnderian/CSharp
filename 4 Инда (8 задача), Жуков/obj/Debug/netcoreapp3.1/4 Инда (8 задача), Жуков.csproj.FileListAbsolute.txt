@@ -1,0 +1,13 @@
+D:\GitKraken\CSharp\4 Инда (8 задача), Жуков\bin\Debug\netcoreapp3.1\4 Инда (8 задача), Жуков.exe
+D:\GitKraken\CSharp\4 Инда (8 задача), Жуков\bin\Debug\netcoreapp3.1\4 Инда (8 задача), Жуков.deps.json
+D:\GitKraken\CSharp\4 Инда (8 задача), Жуков\bin\Debug\netcoreapp3.1\4 Инда (8 задача), Жуков.runtimeconfig.json
+D:\GitKraken\CSharp\4 Инда (8 задача), Жуков\bin\Debug\netcoreapp3.1\4 Инда (8 задача), Жуков.runtimeconfig.dev.json
+D:\GitKraken\CSharp\4 Инда (8 задача), Жуков\bin\Debug\netcoreapp3.1\4 Инда (8 задача), Жуков.dll
+D:\GitKraken\CSharp\4 Инда (8 задача), Жуков\bin\Debug\netcoreapp3.1\4 Инда (8 задача), Жуков.pdb
+D:\GitKraken\CSharp\4 Инда (8 задача), Жуков\obj\Debug\netcoreapp3.1\4 Инда (8 задача), Жуков.csprojAssemblyReference.cache
+D:\GitKraken\CSharp\4 Инда (8 задача), Жуков\obj\Debug\netcoreapp3.1\4 Инда (8 задача), Жуков.AssemblyInfoInputs.cache
+D:\GitKraken\CSharp\4 Инда (8 задача), Жуков\obj\Debug\netcoreapp3.1\4 Инда (8 задача), Жуков.AssemblyInfo.cs
+D:\GitKraken\CSharp\4 Инда (8 задача), Жуков\obj\Debug\netcoreapp3.1\4 Инда (8 задача), Жуков.csproj.CoreCompileInputs.cache
+D:\GitKraken\CSharp\4 Инда (8 задача), Жуков\obj\Debug\netcoreapp3.1\4 Инда (8 задача), Жуков.dll
+D:\GitKraken\CSharp\4 Инда (8 задача), Жуков\obj\Debug\netcoreapp3.1\4 Инда (8 задача), Жуков.pdb
+D:\GitKraken\CSharp\4 Инда (8 задача), Жуков\obj\Debug\netcoreapp3.1\4 Инда (8 задача), Жуков.genruntimeconfig.cache
